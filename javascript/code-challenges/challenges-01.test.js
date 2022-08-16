@@ -92,11 +92,10 @@ const addValues = (arr, value) => {
 // console.log(addValues([1,2,3],4));
 
 const addNumbers = (num, arr, times, callback) => {
-  let res = []
   let i = 0;
-  while (i <= times) {
-      callback(arr,num)
-      i++;
+  while (i < times) {
+    callback(arr, num)
+    i++;
   }
   return arr;
 };
@@ -121,9 +120,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   let list = [];
-  availableItems.forEach(p=>list.push(p))
+  availableItems.forEach(p => {
+    if (p.available == true) {
+      list.push(p.name);
+    }
+  });
   return list;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -141,15 +144,15 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   let res = []
-    for(let x of arr){
-      if(x % 5 == 0 && x %3 == 0){
-        res.push("Fizz Buzz");
-      }
-      else if(x % 5==0) res.push("Buzz");
-      else if(x % 3==0) res.push("Fizz");
-      else res.push(x)
+  for (let x of arr) {
+    if (x % 5 == 0 && x % 3 == 0) {
+      res.push("Fizz Buzz");
     }
-    return res;
+    else if (x % 5 == 0) res.push("Buzz");
+    else if (x % 3 == 0) res.push("Fizz");
+    else res.push(x)
+  }
+  return res;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -203,7 +206,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
