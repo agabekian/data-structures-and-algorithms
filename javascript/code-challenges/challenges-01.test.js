@@ -40,7 +40,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  arr.forEach(el=>el.allUpperCase)
+  let res=[];
+  arr.forEach(el=>res.push(el.toUpperCase()))
+  return res;
 };
 
 /* ------------------------------------------------------------------------------------------------
