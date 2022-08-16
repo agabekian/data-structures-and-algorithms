@@ -141,7 +141,7 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   let res = []
-    for(let x in arr){
+    for(let x of arr){
       if(x % 5 == 0 && x %3 == 0){
         res.push("Fizz Buzz");
       }
