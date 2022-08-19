@@ -54,7 +54,6 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   let res = arr.reduce((acc, val, idx) => acc + 1, 0);
-
   return res;
 };
 
@@ -205,7 +204,12 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let res = 0;
+  res = arr.reduce(({ count, sum }, cur) => { //destructuring happens here
+    console.log("sum", sum, count);
+    return { count: count + 1, sum: sum + cur }
+  }, { count: 0, sum: 0 })
+  return res.sum / res.count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -226,7 +230,7 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
