@@ -128,12 +128,13 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let stuff = gruffaloCrumble.ingredients;
   let result = [];
-  for(let i in stuff){
-      result.push((stuff[i].split(" ").slice(2).join(" ")));
-      // result.push(stuff[i].slice())
-  }
+  recipe.ingredients.forEach((ing) => {
+    let noAmt = ing.slice(ing.indexOf(' ') + 1)
+    let noUnits = noAmt.slice(noAmt.indexOf(' ')+1)
+    result.push(noUnits);
+    return result
+  })
   return result;
 }; 
 
@@ -147,9 +148,14 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach((ing) => {
+    let noAmt = ing.split(' ')
+    let noUnits = noAmt.slice(2).join(' ')
+    result.push(noUnits);
+  })
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -298,7 +304,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
