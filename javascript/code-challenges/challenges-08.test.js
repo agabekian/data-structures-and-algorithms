@@ -53,8 +53,10 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  return charArray.sort((a,b) => a.children.length === b.children.length ? a.name.localeCompare(b.name)
+  :a.children.length - b.children.length)
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -118,7 +120,6 @@ const citiesAtoJ = (arr) => {
 
   let re = /^[A-J]/g;
   return arr.filter(c => c.match(re))
-
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -131,10 +132,12 @@ If the user enters any of these four inputs, return true. For any other input, r
 
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
-
 const matchMonth = (input) => {
-  let re = /^(October|Oct|oct|october)/
-  return input.match(re)
+  let re = /^oct(ober)?/i
+  if(input.match(re)){
+    return true
+  }
+  return false
 };
 
 /* ------------------------------------------------------------------------------------------------
