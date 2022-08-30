@@ -1,3 +1,4 @@
+
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,24 +94,11 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
-const salesData = (stores) => {
-  let res = [];
-  for (let h in hoursOpen) {
-    let store = hoursOpen[h];
-    let hourlySales = 0;
-    for (let i in stores) {
-      store = stores[i];
-      hourlySales += stores[i][h];
-      // console.log(hoursOpen[h], hourlySales);
-    }
-
-    res.push({
-      "sales": hourlySales + " cookies",
-      "time": hoursOpen[h]
-    })
-  }
-  return res
-}
+const salesData = (hours, data) => {
+    let res = [];
+    data.forEach((d,i) =>  res.push({sales:d+" cookies", time:hoursOpen[i]}))
+    return res;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
