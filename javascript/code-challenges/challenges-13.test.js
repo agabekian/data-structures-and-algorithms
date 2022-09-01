@@ -24,8 +24,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
+  return arr.map((a) => a[0])
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -36,9 +37,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  let re = /:\)/
+  return arr.filter(a => {
+    return re.test(a) ? a : console.log("nope");
+  })
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -80,9 +83,9 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let re = ':\\)'
+  return arr.every(s => s.match(re))
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
