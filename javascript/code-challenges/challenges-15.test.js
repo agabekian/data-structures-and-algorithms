@@ -10,10 +10,10 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 ------------------------------------------------------------------------------------------------ */
 
-// const screenForNames = (arr) => {
-//   let re = ["Mr"]
-// }
-
+const screenForNames = (arr) => {
+  let re = /^(M[r-s].|Dr.|Mrs.)\s\w/
+  return arr.filter(s => re.test(s))
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -101,9 +101,15 @@ let starWarsData = [{
   gender: 'n/a'
 }];
 
+
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  let str = '';
+  arr.map((s, ix) => Number(s.mass) > Number(arr[0].mass)
+      ? (ix < arr.length - 1 ? str += s.name + " - "
+          : str += s.name) : console.log("skipped"))
+  return str;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -119,10 +125,18 @@ Here is an example of the input:
 This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
-const sortBy = (property, arr) => {
-  // Solution code here...
-};
 
+const sortBy = (property, arr) => {
+  let res = [];
+  switch (property) {
+      case "price":
+          res = arr.sort((a, b) => a.price - b.price)
+          break;
+      case "name":
+          res = arr.sort((a, b) => a.name.localeCompare(b.name))
+  }
+  return res;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
 
@@ -136,8 +150,9 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
-};
+  let re = /^https:\/\//
+  return re.test(url)
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
