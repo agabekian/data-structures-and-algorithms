@@ -4,8 +4,15 @@
 
 ## Code Challenges
 
-### Challenge 01
+### Code Challenge: Class 01
 
-Location: `codechallenges/linkedlist/LinkedListChallenges`
+<!-- Location: `codechallenges/linkedlist/LinkedListChallenges` -->
 
-Method: `linkedListChallenge06()`
+Location [reverseArray](Arrays/reverseArray/README.MD)
+
+### Code Challenge: Class 02
+
+<!-- Location: `codechallenges/linkedlist/LinkedListChallenges` -->
+
+Location [insertShiftArray](Arrays/arrayInsertShift/README.MD)
+
