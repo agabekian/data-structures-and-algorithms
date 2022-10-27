@@ -16,3 +16,10 @@ Location [reverseArray](Arrays/reverseArray/README.MD)
 
 Location [insertShiftArray](Arrays/arrayInsertShift/README.MD)
 
+### Code Challenge: Class 03
+
+<!-- Location: `codechallenges/linkedlist/LinkedListChallenges` -->
+
+Location [binarySearch](Arrays/binarysearch/README.MD)
+
+
