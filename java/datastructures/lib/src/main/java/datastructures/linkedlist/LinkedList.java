@@ -7,4 +7,6 @@ public class LinkedList
     {
         return "null";  // TODO: implement me
     }
+
+
 }
