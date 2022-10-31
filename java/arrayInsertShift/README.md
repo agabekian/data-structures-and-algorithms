@@ -4,7 +4,7 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 ## Whiteboard Process
 
-![image](array2.png)
+![image](array2.jpg)
 ## Approach & Efficiency
 time -> O(N)
 space -> O(N)
