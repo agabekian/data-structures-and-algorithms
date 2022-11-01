@@ -26,10 +26,16 @@ To String(): O(N) since we have to traverse the entire list to build the ouyputs
 
 #### API docs
 
-_void insert(int val)_ The insert method takes an integer as an arg and adds the node with the arg val as the new head of the list.
+_void insert(val)_ The insert method takes an integer as an arg and adds the node with the arg val as the new head of the list.
 
-_boolean includes(int val)_
+_boolean includes(val)_
 Takes target integer value as an _arg_ and returns true if the node's integer value is found in the list.
 
 _String toString()_
 Returns a string representation of the linked list.
+
+_void append(val)_ Append method, appends value to the end of SLL. Does not check for null input.
+
+_void insertBefore(val, newVal)_ insert the new node with newVal _before_ the node with the given value (val). Checks for null arg and if val is the beginning of thelist.
+
+_void insertAfter(val, newVal)_ insert the new node with newVal _after_ the node with the given value (val).

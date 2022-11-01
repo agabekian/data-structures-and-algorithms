@@ -3,6 +3,11 @@ package datastructures.linkedlist;
 public class LinkedList<T> {
 
   public Node<T> head = null;
+  public void checkArg(LinkedList head){
+    if(head == null) {
+      throw new IllegalArgumentException("Null given as arg");
+    }
+  }
 
   public void insert(T val) {
     Node<T> newHead = new Node<T>(val);
@@ -45,7 +50,6 @@ public class LinkedList<T> {
 
   public void insertBefore(T val, T newVal) {
     if (val == head.val) {
-      System.out.println("dude");
       insert(newVal);
       return;
     }
@@ -70,8 +74,8 @@ public class LinkedList<T> {
       prev = prev.next;
     }
     System.out.println("-----" + cur.val);
+    Node<T> temp = cur.next;
     cur.next = new Node(newVal);
-    cur.next.next = prev;
+    cur.next.next = temp;
   }
-
 }

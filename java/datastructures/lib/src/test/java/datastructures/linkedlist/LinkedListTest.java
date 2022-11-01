@@ -71,6 +71,6 @@ public class LinkedListTest {
     sut.insertAfter(2,"after2");
     String logo = sut.toString();
     System.out.println(logo);
-    assertTrue(logo.contains("{ 1 } -> { 101 } -> { 2 }"));
+    assertTrue(logo.contains("{ 1 } -> { 2 } -> { after2 }"));
   }
 }
