@@ -38,4 +38,39 @@ public class LinkedListTest {
       )
     );
   }
+
+  @Test
+  void append() {
+    LinkedList sut = new LinkedList();
+    sut.insert(11);
+    sut.insert(13);
+    sut.append(1999);
+    String logo = sut.toString();
+    System.out.println(logo);
+    assertTrue(logo.contains("{ 1999 } -> NULL"));
+  }
+
+  @Test
+  void testInsertBefore() {
+    LinkedList sut = new LinkedList();
+    sut.insert(3);
+    sut.insert(2);
+    sut.insert(1);
+    sut.insertBefore(2, 101);
+    String logo = sut.toString();
+    System.out.println(logo);
+    assertTrue(logo.contains("{ 1 } -> { 101 } -> { 2 }"));
+  }
+
+  @Test
+  void testInsertAfter(){
+    LinkedList sut = new LinkedList();
+    sut.insert(3);
+    sut.insert(2);
+    sut.insert(1);
+    sut.insertAfter(2,"after2");
+    String logo = sut.toString();
+    System.out.println(logo);
+    assertTrue(logo.contains("{ 1 } -> { 101 } -> { 2 }"));
+  }
 }
