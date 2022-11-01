@@ -1,7 +1,7 @@
-#Singly Linked List
+# Singly Linked List
 
 
-###  Challenge
+###  Challenges
 Implement a Singly Linked List with methods:
  insert()
  includes()
@@ -28,14 +28,19 @@ To String(): O(N) since we have to traverse the entire list to build the ouyputs
 
 _void insert(val)_ The insert method takes an integer as an arg and adds the node with the arg val as the new head of the list.
 
+
 _boolean includes(val)_
 Takes target integer value as an _arg_ and returns true if the node's integer value is found in the list.
 
 _String toString()_
 Returns a string representation of the linked list.
 
-_void append(val)_ Append method, appends value to the end of SLL. Does not check for null input.
+_void append(int val)_ Append method, appends value to the end of SLL. Does not check for null input.
 
-_void insertBefore(val, newVal)_ insert the new node with newVal _before_ the node with the given value (val). Checks for null arg and if val is the beginning of thelist.
+_void insertBefore(int val, int newVal)_ insert the new node with newVal _before_ the node with the given value (val). Checks for null arg and if val is the beginning of thelist.
 
-_void insertAfter(val, newVal)_ insert the new node with newVal _after_ the node with the given value (val).
+_void insertAfter(int val, int newVal)_ insert the new node with newVal _after_ the node with the given value (val).
+
+_kthFromEnd(int k)_ Reverses(re-wires) the list and returns Kth value of the node from what would be the end of the original list
+
+_middle()_ Returns val of the middle node. Build on reverse() method which now have a counter to track list length.
