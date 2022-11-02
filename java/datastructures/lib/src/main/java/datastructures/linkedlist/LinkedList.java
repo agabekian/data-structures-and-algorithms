@@ -3,8 +3,9 @@ package datastructures.linkedlist;
 public class LinkedList<T> {
 
   public Node<T> head = null;
-  public void checkArg(LinkedList head){
-    if(head == null) {
+
+  public void checkArg(LinkedList head) {
+    if (head == null) {
       throw new IllegalArgumentException("Null given as arg");
     }
   }
@@ -53,7 +54,7 @@ public class LinkedList<T> {
       insert(newVal);
       return;
     }
-    if(head.val==null){
+    if (head.val == null) {
       throw new IllegalArgumentException("null given");
     }
     Node<T> cur = head;
@@ -73,9 +74,57 @@ public class LinkedList<T> {
       cur = cur.next;
       prev = prev.next;
     }
-    System.out.println("-----" + cur.val);
     Node<T> temp = cur.next;
     cur.next = new Node(newVal);
     cur.next.next = temp;
+  }
+
+  public int reverseLL() {
+    int listLen = 1;
+    System.out.println("reversing");
+    Node<T> cur = head;
+    Node<T> prev = null;
+    Node<T> temp = null;
+    while (cur != null) {
+      temp = cur.next;
+      cur.next = prev;
+      prev = cur;
+      cur = temp;
+      listLen+=1;
+    }
+    System.out.println("new head"+prev.val);
+    head = prev;
+    return listLen; //again!
+  }
+
+  public T kthFromEnd(T k) {
+    int counter = 1;
+    reverseLL();
+    System.out.println("sll rev"+head.val);
+    Node<T> cur = head;
+    while (counter < (int) k) {
+      System.out.println(counter);
+      counter++;
+      cur = cur.next;
+
+    }
+    System.out.println("stopped at "+cur.val);
+    return cur.val;
+  }
+
+  public T middle() {
+    int counter =1;
+    int len = reverseLL();
+    int range = len/2;
+    System.out.println("sll rev"+head.val);
+    Node<T> cur = head;
+    while ( counter < range) {
+      System.out.println(counter);
+      counter+=1;
+      cur = cur.next;
+
+    }
+    System.out.println("stopped at "+cur.val);
+    return cur.val;
   }
 }

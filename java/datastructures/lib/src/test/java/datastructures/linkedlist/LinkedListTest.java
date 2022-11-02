@@ -2,6 +2,7 @@ package datastructures.linkedlist;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LinkedListTest {
@@ -72,5 +73,31 @@ public class LinkedListTest {
     String logo = sut.toString();
     System.out.println(logo);
     assertTrue(logo.contains("{ 1 } -> { 2 } -> { after2 }"));
+  }
+  @Test
+  void testKth(){
+    LinkedList sut = new LinkedList();
+    sut.insert(3);
+    sut.insert("find me");
+    sut.insert(1);
+
+    System.out.println(sut);
+    String res = (String) sut.kthFromEnd(2);
+    assertTrue(res == "find me");
+  }
+
+  @Test
+  void testMiddle(){
+    LinkedList sut = new LinkedList();
+    sut.insert(11);
+    sut.insert("skip me");
+    sut.insert("imma middle");
+    sut.insert(13);
+    sut.insert("skip me");
+
+
+    String res = (String) sut.middle();
+    System.out.println("middle val: "+res);
+    assertTrue(res == "imma middle");
   }
 }
