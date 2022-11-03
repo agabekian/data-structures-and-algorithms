@@ -90,9 +90,9 @@ public class LinkedList<T> {
       cur.next = prev;
       prev = cur;
       cur = temp;
-      listLen+=1;
+      listLen += 1;
     }
-    System.out.println("new head"+prev.val);
+    System.out.println("new head" + prev.val);
     head = prev;
     return listLen; //again!
   }
@@ -100,7 +100,7 @@ public class LinkedList<T> {
   public T kthFromEnd(T k) {
     int counter = 1;
     reverseLL();
-    System.out.println("sll rev"+head.val);
+    System.out.println("sll rev" + head.val);
     Node<T> cur = head;
     while (counter < (int) k) {
       System.out.println(counter);
@@ -108,23 +108,41 @@ public class LinkedList<T> {
       cur = cur.next;
 
     }
-    System.out.println("stopped at "+cur.val);
+    System.out.println("stopped at " + cur.val);
     return cur.val;
   }
 
   public T middle() {
-    int counter =1;
+    int counter = 1;
     int len = reverseLL();
-    int range = len/2;
-    System.out.println("sll rev"+head.val);
+    int range = len / 2;
+    System.out.println("sll rev" + head.val);
     Node<T> cur = head;
-    while ( counter < range) {
+    while (counter < range) {
       System.out.println(counter);
-      counter+=1;
+      counter += 1;
       cur = cur.next;
-
     }
-    System.out.println("stopped at "+cur.val);
+    System.out.println("stopped at " + cur.val);
     return cur.val;
   }
+
+  public void zip(Node<T> l1, Node<T> l2){
+
+    Node<T> node1next,node2next;
+
+    while(l1!=null && l2!=null){
+      node1next = l1.next;
+      l1.next = l2;
+      node1next = node1next;
+
+      node2next = l2.next;
+      l2.next = node1next;
+      l2 = node2next;
+
+    }
+    System.out.println("HEAD"+head);
+
+  }
+
 }
