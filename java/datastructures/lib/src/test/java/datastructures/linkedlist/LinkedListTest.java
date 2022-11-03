@@ -100,4 +100,25 @@ public class LinkedListTest {
     System.out.println("middle val: "+res);
     assertTrue(res == "imma middle");
   }
+  @Test
+  void testZip(){
+
+    LinkedList sut1 = new LinkedList();
+    sut1.insert(11);
+    sut1.insert("skip me");
+    sut1.insert("imma middle");
+    sut1.insert(13);
+
+    LinkedList sut2 = new LinkedList();
+    sut2.insert(888);
+    sut2.insert(999);
+    sut2.insert(666);
+    sut2.insert(13);
+
+    LinkedList test = new LinkedList();
+    test.zip(sut1,sut2);
+
+
+  }
+
 }
