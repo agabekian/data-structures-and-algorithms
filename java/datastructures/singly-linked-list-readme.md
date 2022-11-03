@@ -54,4 +54,5 @@ Test: assertTrue that the string "find me" is found at k=2.
 
 _middle()_ Returns val of the middle node. Build on reverse() method which now have a counter to track list length.
 
-_zip()_ Given two linked list args, method"Stitches" and mutates and returns  L1 list after re-linking alternatively nodes between l1 and l2
+_zip()_ Given two linked list args, method"Stitches" and mutates and returns  L1 list after re-t add .
+linking alternatively nodes between l1 and l2
