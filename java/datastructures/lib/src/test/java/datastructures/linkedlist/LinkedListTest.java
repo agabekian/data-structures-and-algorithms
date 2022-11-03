@@ -113,10 +113,16 @@ public class LinkedListTest {
     sut2.insert(888);
     sut2.insert(999);
     sut2.insert(666);
-    sut2.insert(13);
+    sut2.insert(101);
 
     LinkedList test = new LinkedList();
-    test.zip(sut1,sut2);
+    LinkedList newLL = test.zip(sut1,sut2);
+    System.out.println(newLL.toString());
+    assertTrue((Integer) newLL.head.val== 13
+      && (String) newLL.head.next.next.val=="imma middle");
+
+
+
 
 
   }

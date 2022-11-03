@@ -127,22 +127,23 @@ public class LinkedList<T> {
     return cur.val;
   }
 
-  public void zip(Node<T> l1, Node<T> l2){
-
+   LinkedList zip(LinkedList l1, LinkedList<T> l2){
+    //presuming egual length of lists
     Node<T> node1next,node2next;
+    Node<T> cur1 = l1.head;
+    Node<T> cur2 = l2.head;
 
-    while(l1!=null && l2!=null){
-      node1next = l1.next;
-      l1.next = l2;
-      node1next = node1next;
+    while(cur1!=null && cur2!=null){
+      System.out.println("cur val "+cur1.val);
+      node1next = cur1.next;
+      cur1.next = cur2;
+      cur1 = node1next;
 
-      node2next = l2.next;
-      l2.next = node1next;
-      l2 = node2next;
-
+      node2next = cur2.next;
+      cur2.next = node1next;
+      cur2 = node2next;
     }
-    System.out.println("HEAD"+head);
-
+    return l1;
   }
 
 }
