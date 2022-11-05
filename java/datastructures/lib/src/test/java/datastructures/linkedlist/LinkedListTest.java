@@ -1,5 +1,6 @@
 package datastructures.linkedlist;
 
+import datastructures.linkedlist.LinkedList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LinkedListTest {
   @Test
   void testInsertAsHead() {
+
     LinkedList sut = new LinkedList();
     sut.insert(11);
     sut.insert(13);
