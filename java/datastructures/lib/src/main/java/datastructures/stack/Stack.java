@@ -20,7 +20,7 @@ public class Stack<T> {
   }
 
   public T pop() throws NoSuchElementException {
-    if(top == null){
+    if (top == null) {
       throw new NoSuchElementException("Is null, Stack is empty");
     }
     T res = top.val;
@@ -29,9 +29,16 @@ public class Stack<T> {
   }
 
   public T peek() throws NoSuchElementException {
-    if(top == null){
+    if (top == null) {
       throw new NoSuchElementException("Is null, Stack is empty");
     }
     return top.val;
+  }
+
+  public boolean isEmpty() {
+    if (top == null) {
+      return true;
+    }
+    return false;
   }
 }

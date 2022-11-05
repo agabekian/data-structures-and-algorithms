@@ -66,4 +66,15 @@ public class StackTest {
       }
     );
   }
+
+  @Test
+  void testIsEmpty() {
+    Stack emptyStack = new Stack();
+    assertTrue(emptyStack.isEmpty());
+
+    Stack notEmptyStack = new Stack();
+    notEmptyStack.push(1999999);
+    assertFalse(notEmptyStack.isEmpty());
+  }
+
 }
