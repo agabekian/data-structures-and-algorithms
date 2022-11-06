@@ -22,7 +22,7 @@ public class StackTest {
     assertTrue((String) sut.top.val == "pop me");
     //pop() returns the last added node
     assertTrue(sut.pop() == "pop me");
-    //empty remaining nodes from stack
+    //empty remaining nodes from stack with pop()
     sut.pop();
     //assert that the stack is empty i.e. "top" is null
     assertNull(sut.top);
