@@ -1,13 +1,13 @@
-Stacks and Queues
-Challenge
+# Stacks and Queues
+Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle.
+Queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.
+## Challenge
 Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue.
-
-
 Construct Node classes to be used as underlying structures for the Stack class and the Queue class.
 Create methods for stack and queue to add and remove elements.
 Create a method to return the top of the stack or the front of the queue without returning it.
 Create a method to determine if the stack/queue is empty.
-Tests
+#### Tests
 Can successfully push onto a stack
 Can successfully push multiple values onto a stack
 Can successfully pop off the stack
@@ -22,30 +22,26 @@ Can successfully peek into a queue, seeing the expected value
 Can successfully empty a queue after multiple dequeues
 Can successfully instantiate an empty queue
 Calling dequeue or peek on empty queue raises exception
-Approach & Efficiency
-Because there is no traversal involved working with a stack or a queue all the
-method's time complexities are linear O(1).
+## Approach & Efficiency
+No traversal of stack or a queue needed. Everything is done in O(1).
+## API
+### Stack
+```public void push(T value)``` Adds a new element to the top of the stack.
 
+```public T pop()``` Returns the top's value and removes element from the stack.
 
-#### Stack
+```public T peek()``` Returns the value of the top.
 
-public void push(T value) Adds a new element to the top of the stack.
+```public boolean isEmpty()``` Checks if the stack is empty.
 
-public T pop() Returns the top's value and removes element from the stack.
+### Queue
 
-public T peek() Returns the value of the top.
+```public void enqueu(T value)``` Adds a new element to the back of the queue.
 
-public boolean isEmpty() Check if the stack is empty.
+```public T dequeue``` Returns the top value and removes the element from the queue.
 
+```public T peek()``` Returns the top element's value on the queue but does not remove it form the queue.
 
-#### Queue
+```public boolean isEmpty()``` Checks if the queue is empty.
 
-public void enqueu(T value) Adds a new element to the back of the queue.
-
-public T dequeue Returns the top element's value and removes it from the queue.
-
-public T peek() Returns the top element's value on the queue but does not remove it form the queue.
-
-public boolean isEmpty() Check if the stack is empty.
-
-public int getLength() Returns the length of the queue.
+```public int getLength()``` Returns the length of the queue.
