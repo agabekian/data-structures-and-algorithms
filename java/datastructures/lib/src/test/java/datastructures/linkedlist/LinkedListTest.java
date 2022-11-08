@@ -118,9 +118,6 @@ public class LinkedListTest {
     sut2.insert(13);
 
     LinkedList test = new LinkedList();
-    test.zip(sut1,sut2);
-
-
+    test.zip(sut1.head,sut2.head);
   }
-
 }
