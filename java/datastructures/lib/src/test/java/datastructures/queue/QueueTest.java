@@ -1,6 +1,5 @@
 package datastructures.queue;
 
-import datastructures.stack.Queue;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
