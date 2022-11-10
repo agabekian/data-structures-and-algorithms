@@ -1,6 +1,5 @@
 package datastructures.linkedlist;
 
-import datastructures.linkedlist.LinkedList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

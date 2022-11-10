@@ -1,5 +1,4 @@
-package datastructures.stack;
-
+package datastructures.queue;
 
 import datastructures.linkedlist.Node;
 
@@ -27,22 +26,23 @@ public class Queue<T> {
   }
 
   public T dequeve() throws NoSuchElementException {
-    if(front==null){
+    if (front == null) {
       throw new NoSuchElementException("The queue is empty");
     }
-    T fValue  = front.val;
+    T fValue = front.val;
     front = front.next;
     length--;
     return fValue;
   }
 
   public T peek() throws NoSuchElementException {
-    if(front==null){
+    if (front == null) {
       throw new NoSuchElementException("The queue is empty");
     }
     return front.val;
   }
-  public boolean isEmpty(){
+
+  public boolean isEmpty() {
     return front == null;
   }
 }

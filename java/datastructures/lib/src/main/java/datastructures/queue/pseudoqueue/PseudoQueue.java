@@ -1,4 +1,4 @@
-package datastructures.pseudoqueue;
+package datastructures.queue.pseudoqueue;
 
 import datastructures.stack.Stack;
 
