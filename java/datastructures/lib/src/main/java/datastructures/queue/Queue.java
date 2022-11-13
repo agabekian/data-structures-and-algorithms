@@ -42,6 +42,12 @@ public class Queue<T> {
     return front.val;
   }
 
+  public void duck(int k) {
+    while (front != null && k > 1) {
+      front = front.next; //dequeue
+    }
+  }
+
   public boolean isEmpty() {
     return front == null;
   }
