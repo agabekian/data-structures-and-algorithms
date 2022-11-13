@@ -1,6 +1,6 @@
 Whiteboard:
 
-![](lib/src/main/java/datastructures/brackets/stacks-brackets.png)
+![pix](lib/src/main/java/datastructures/brackets/stacks-brackets.png)
 
 Approach & Efficiency:
 

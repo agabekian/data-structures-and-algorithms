@@ -34,11 +34,11 @@ public class Stack<T> {
     }
     return top.val;
   }
-
   public boolean isEmpty() {
     if (top == null) {
       return true;
     }
     return false;
   }
+
 }
