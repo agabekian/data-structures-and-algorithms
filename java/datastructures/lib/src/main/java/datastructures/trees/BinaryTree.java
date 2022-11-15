@@ -1,5 +1,7 @@
 package datastructures.trees;
 
+import datastructures.trees.Node;
+
 import java.util.ArrayList;
 
 class BinaryTree {
