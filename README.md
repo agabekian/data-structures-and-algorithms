@@ -8,7 +8,7 @@
 | [Implementation: Stack and a Queue](./java/datastructures/stack-and-queues-readme.md)        |
 | [Implementation: Pseudo Queue with two Stacks](./java/datastructures/pseudo-queue-readme.md) |
 | [Implementation: Validate Brackets](./java/datastructures/stack-queue-brackets.md)           |
-| [Implementation: Trees](./java/datastructures/trees-readme.md)                               |
-
+| [Implementation: Trees](./java/datastructures/trees-max-value-readme.md)                               |
+|[Extending an Implementation: Max Value Binary Tree](./java/datastructures/trees-readme.md)
 
 
