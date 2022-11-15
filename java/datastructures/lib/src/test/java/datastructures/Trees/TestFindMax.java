@@ -27,6 +27,6 @@ public class TestFindMax {
 
     int res = sut.findMax(sut.root);
     assertTrue(res == 11);
-    assertTrue
+
   }
 }
