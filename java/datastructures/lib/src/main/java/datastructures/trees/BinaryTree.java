@@ -4,11 +4,12 @@ import datastructures.trees.Node;
 
 import java.util.ArrayList;
 
-class BinaryTree {
+class BinaryTree<T> {
 
   Node root = null;
 
-  public BinaryTree() {}
+  public BinaryTree() {
+  }
 
   public BinaryTree(Node root) {
     this.root = root;
@@ -29,8 +30,6 @@ class BinaryTree {
     values.add(node.val);
     preOrder(node.left, values);
     preOrder(node.right, values);
-
-
   }
 
   public ArrayList inOrder() {
@@ -61,5 +60,15 @@ class BinaryTree {
     postOrder(node.left, values);
     postOrder(node.right, values);
     values.add(node.val);
+  }
+
+  public int findMax(Node node) {
+    if (node == null) return 0;
+    int max = (int) node.val;
+    int leftVal = findMax(node.left);
+    int rightVal = findMax(node.right);
+    if (leftVal > max) max = leftVal;
+    if (rightVal > max) max = rightVal;
+    return max;
   }
 }
