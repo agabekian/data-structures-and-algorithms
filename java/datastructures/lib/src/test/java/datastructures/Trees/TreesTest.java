@@ -26,6 +26,6 @@ public class TreesTest {
     assertEquals(sut2.root.val, 11);
 //test contains method in BST
     assertTrue(sut2.contains(11));
-
+//how to test string?
   }
 }
