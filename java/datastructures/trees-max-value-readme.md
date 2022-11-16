@@ -8,8 +8,8 @@ Once recursion is completed, return max.
 
 
 Whiteboard:
+![](images/max.png)
 
-![](lib/src/test/java/datastructures/trees/max.png)
 
 Time Complexity: O(N) for N nodes in the tree.
 Using recursion every node of the tree is visited
