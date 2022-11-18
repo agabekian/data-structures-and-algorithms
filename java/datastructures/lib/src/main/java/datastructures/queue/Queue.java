@@ -25,7 +25,7 @@ public class Queue<T> {
     length += 1;
   }
 
-  public T dequeve() throws NoSuchElementException {
+  public T dequeue() throws NoSuchElementException {
     if (front == null) {
       throw new NoSuchElementException("The queue is empty");
     }

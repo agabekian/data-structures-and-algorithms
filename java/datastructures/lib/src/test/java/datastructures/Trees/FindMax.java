@@ -1,12 +1,11 @@
 package datastructures.trees;
 
-import datastructures.stack.Node;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class TestFindMax {
+public class FindMax {
   @Test
   void testBinaryTress() {
     BinaryTree sut = new BinaryTree();

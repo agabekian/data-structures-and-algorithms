@@ -29,14 +29,14 @@ public class QueueTest {
     assertFalse(sut.front == null);
 
 
-    assertTrue(sut.dequeve() == "First in q"); //dequeue the correct element
+    assertTrue(sut.dequeue() == "First in q"); //dequeue the correct element
     assertTrue(sut.front != null && sut.getLength() == 1); //front IS null, len is 1
-    sut.dequeve(); // empty now
+    sut.dequeue(); // empty now
     //Throw exception while attempt to dequeue on null
     assertThrows(NoSuchElementException.class, new Executable() {
         @Override
         public void execute() throws Throwable {
-          sut.dequeve();
+          sut.dequeue();
         }
       }
     );
@@ -51,7 +51,7 @@ public class QueueTest {
     sut.enqueue(11);
     assertTrue((int) sut.peek() == 11); //confirm peek is 11.
 
-    sut.dequeve(); //now null
+    sut.dequeue(); //now null
     assertTrue(sut.front == null && sut.getLength() == 0); //front IS null, len is 0
     //Throw exception while attempt to dequeue on null
     assertThrows(NoSuchElementException.class, new Executable() {
