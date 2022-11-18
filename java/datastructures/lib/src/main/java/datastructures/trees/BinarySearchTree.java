@@ -44,19 +44,19 @@ class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree {
   }
 
   class Main {
-    public static void main(String[] args) { //JB quick test in main
-      BinarySearchTree tree = new BinarySearchTree();
-      tree.add(10);
-      tree.add(5);
-      tree.add(15);
-      tree.add(7);
-
-
-      System.out.println(tree.root.val);
-      System.out.println(tree.root.left.val);
-      System.out.println(tree.root.right.val);
-      System.out.println(tree.root.left.right.val);
-      System.out.println(tree.contains(7)); //checks true
+    public void main(String[] args) { //JB quick test in main
+//      BinarySearchTree tree = new BinarySearchTree();
+//      tree.add(10);
+//      tree.add(5);
+//      tree.add(15);
+//      tree.add(7);
+//
+//
+//      System.out.println(tree.root.val);
+//      System.out.println(tree.root.left.val);
+//      System.out.println(tree.root.right.val);
+//      System.out.println(tree.root.left.right.val);
+//      System.out.println(tree.contains(7)); //checks true
     }
   }
 }
