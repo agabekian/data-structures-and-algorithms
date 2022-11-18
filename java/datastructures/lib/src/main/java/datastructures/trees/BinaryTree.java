@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 class BinaryTree<T> {
 
-  Node root = null;
+  Node root;
 
   public BinaryTree() {
   }
