@@ -1,9 +1,10 @@
 Binary Trees - Max Value
+
 Write a method extending Binary Trees that returns the maximum value in a binary tree.
 I/O input: Binary Tree
    output: int
 
-Taverse recursively over Binary Tree (depth first) keeping track of highest value (max)
+Traverse recursively over Binary Tree (depth first) keeping track of highest value (max)
 Once recursion is completed, return max.
 
 
