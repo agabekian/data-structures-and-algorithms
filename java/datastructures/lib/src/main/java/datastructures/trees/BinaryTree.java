@@ -1,12 +1,15 @@
 package datastructures.trees;
 
+import datastructures.queue.Queue;
 import datastructures.trees.Node;
+import org.checkerframework.checker.units.qual.A;
 
+import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 
 class BinaryTree<T> {
 
-  Node root = null;
+  Node root;
 
   public BinaryTree() {
   }
@@ -15,7 +18,7 @@ class BinaryTree<T> {
     this.root = root;
   }
 
-  // Each depth first traversal method should return an array of values, ordered appropriately.
+  // Each depth  first traversal method should return an array of values, ordered appropriately.
 
   public ArrayList preOrder() {
     ArrayList values = new ArrayList();
@@ -70,5 +73,26 @@ class BinaryTree<T> {
     if (leftVal > max) max = leftVal;
     if (rightVal > max) max = rightVal;
     return max;
+  }
+
+  // 17 Breadth-first Traversal. w/ Generics. LC102
+
+  public ArrayList<T> BFS(BinaryTree<T> tree) {
+    Queue<Node<T>> q = new Queue();
+    ArrayList<T> list = new ArrayList<>();
+    if (tree.root != null) {
+      q.enqueue(tree.root);
+      while (q.front!=null) {
+        Node<T> temp = q.dequeue();
+        if (temp.left != null ) {
+          q.enqueue(temp.left);
+        }
+        if (temp.right != null) {
+          q.enqueue(temp.right);
+        }
+        list.add(temp.val);
+      }
+    }
+    return list;
   }
 }

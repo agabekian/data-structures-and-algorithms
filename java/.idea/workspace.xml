@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d2a520a-8b3b-4aa7-9127-cbce527e5294" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/animalshelter/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/brackets/IsValidParens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/test/java/datastructures/validparens/IsValidParensTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datastructures/stack-queue-brackets.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/pseudoqueue/PseudoQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/queue/pseudoqueue/PseudoQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/stack/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/queue/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/test/java/datastructures/linkedlist/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/test/java/datastructures/linkedlist/LinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/test/java/datastructures/queue/QueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/test/java/datastructures/queue/QueueTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="9d2a520a-8b3b-4aa7-9127-cbce527e5294" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

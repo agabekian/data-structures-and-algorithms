@@ -1,18 +1,11 @@
 package datastructures.trees;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
-
-import java.util.NoSuchElementException;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class TestFindMax {
+public class FindMax {
   @Test
   void testBinaryTress() {
     BinaryTree sut = new BinaryTree();
