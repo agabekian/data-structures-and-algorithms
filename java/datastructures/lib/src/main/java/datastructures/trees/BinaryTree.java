@@ -15,7 +15,7 @@ class BinaryTree<T> {
     this.root = root;
   }
 
-  // Each depth first traversal method should return an array of values, ordered appropriately.
+  // Each depth  first traversal method should return an array of values, ordered appropriately.
 
   public ArrayList preOrder() {
     ArrayList values = new ArrayList();
