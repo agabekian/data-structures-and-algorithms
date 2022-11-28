@@ -1,5 +1,6 @@
 package datastructures.linkedlist;
 
+
 public class LinkedList<T> {
 
   public Node<T> head = null;

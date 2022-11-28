@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d2a520a-8b3b-4aa7-9127-cbce527e5294" name="Changes" comment="" />
+    <list default="true" id="9d2a520a-8b3b-4aa7-9127-cbce527e5294" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/codechallenges/Sorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/trees/KAryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/trees/KAryTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datastructures/lib/src/test/java/codechallenges/testSorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/linkedlist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/linkedlist/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/stack/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/trees/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/trees/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/datastructures/lib/src/main/java/datastructures/trees/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/untitled.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
