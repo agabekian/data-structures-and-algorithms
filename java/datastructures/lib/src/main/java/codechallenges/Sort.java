@@ -1,6 +1,6 @@
 package codechallenges;
 
-public class Sorting {
+public class Sort {
   public void insertionSort(int[] arr) {
     int n = arr.length;
     for (int i = 1; i < arr.length; i++) {
