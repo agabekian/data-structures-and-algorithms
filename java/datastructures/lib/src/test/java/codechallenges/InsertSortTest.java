@@ -1,15 +1,14 @@
 package codechallenges;
-import codechallenges.Sort.*;
 import org.junit.jupiter.api.Test;
 
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class testSort
+public class InsertSortTest
 {
 
   @Test
-  void given() {
+  void mirror() {
     Sort sut = new Sort();
     int[] testArr = {20, 18, 12, 8, 5, -2};
     int[] expect = {-2, 5, 8, 12, 18, 20};
