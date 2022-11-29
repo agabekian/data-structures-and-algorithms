@@ -12,4 +12,7 @@
 | [Extending an Implementation: Max Value Binary Tree](./java/datastructures/trees-max-value-readme.md) |
 | [Extending an Implementation: Trees - Breadth First](./java/datastructures/trees-bfs.md)              |
 
+| Code Challenges                                                     |
+|---------------------------------------------------------------------|
+| [Insertion Sort Blog](./java/datastructures/sort-insertion-blog.md) |
 

@@ -1,10 +1,7 @@
 package datastructures.trees;
 
 import datastructures.queue.Queue;
-import datastructures.trees.Node;
-import org.checkerframework.checker.units.qual.A;
 
-import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 
 class BinaryTree<T> {
