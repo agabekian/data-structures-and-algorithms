@@ -9,10 +9,12 @@
 | [Implementation: Pseudo Queue with two Stacks](./java/datastructures/pseudo-queue-readme.md)          |
 | [Implementation: Validate Brackets](./java/datastructures/stack-queue-brackets.md)                    |
 | [Implementation: Trees](./java/datastructures/trees-max-value-readme.md)                              |
+| [Implementation: Hash Tables](./java/datastructures/hashmap-readme.md)                                |
 | [Extending an Implementation: Max Value Binary Tree](./java/datastructures/trees-max-value-readme.md) |
 | [Extending an Implementation: Trees - Breadth First](./java/datastructures/trees-bfs.md)              |
 
 | Code Challenges                                                     |
 |---------------------------------------------------------------------|
 | [Insertion Sort Blog](./java/datastructures/sort-insertion-blog.md) |
+
 
