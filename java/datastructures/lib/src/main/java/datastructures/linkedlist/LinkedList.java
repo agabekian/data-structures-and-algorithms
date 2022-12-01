@@ -1,9 +1,6 @@
 package datastructures.linkedlist;
-
-
 public class LinkedList<T> {
-
-  public Node<T> head = null;
+  public Node<T> head;
 
   public void checkArg(LinkedList head) {
     if (head == null) {
@@ -42,12 +39,15 @@ public class LinkedList<T> {
 
   //day 2 sll monday
   public void append(T val) {
-    Node<T> cur = head;
-//    Node<T> prev = head;
-    while (cur.next != null) {
-      cur = cur.next;
+    if (head == null) {
+      head = new Node<T>(val);
+    } else {
+      Node<T> cur = head;
+      while (cur.next != null) {
+        cur = cur.next;
+      }
+      cur.next = new Node(val);
     }
-    cur.next = new Node(val);
   }
 
   public void insertBefore(T val, T newVal) {
@@ -128,11 +128,11 @@ public class LinkedList<T> {
     return cur.val;
   }
 
-  public void zip(Node<T> l1, Node<T> l2){
+  public void zip(Node<T> l1, Node<T> l2) {
 
-    Node<T> node1next,node2next;
+    Node<T> node1next, node2next;
 
-    while(l1!=null && l2!=null){
+    while (l1 != null && l2 != null) {
       node1next = l1.next;
       l1.next = l2;
       node1next = node1next;
@@ -142,7 +142,7 @@ public class LinkedList<T> {
       l2 = node2next;
 
     }
-    System.out.println("HEAD"+head);
+    System.out.println("HEAD" + head);
 
   }
 
