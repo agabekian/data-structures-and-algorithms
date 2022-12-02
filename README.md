@@ -15,4 +15,5 @@
 | Code Challenges                                                     |
 |---------------------------------------------------------------------|
 | [Insertion Sort Blog](./java/datastructures/sort-insertion-blog.md) |
+| [Merge Sort Blog](./java/datastructures/sort-merge-blog.md)         |
 
