@@ -5,9 +5,7 @@ class Node<T> {
   Node<T> left = null;
   Node<T> right = null;
 
-  Node() {
-    //empty
-  }
+  Node() {}
 
   Node(T val) {
     this.val = val;

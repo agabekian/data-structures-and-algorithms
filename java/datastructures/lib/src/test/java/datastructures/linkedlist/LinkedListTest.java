@@ -1,5 +1,6 @@
 package datastructures.linkedlist;
 
+import org.checkerframework.framework.qual.LiteralKind;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LinkedListTest {
   @Test
   void testInsertAsHead() {
-
     LinkedList sut = new LinkedList();
     sut.insert(11);
     sut.insert(13);
@@ -65,18 +65,19 @@ public class LinkedListTest {
   }
 
   @Test
-  void testInsertAfter(){
+  void testInsertAfter() {
     LinkedList sut = new LinkedList();
     sut.insert(3);
     sut.insert(2);
     sut.insert(1);
-    sut.insertAfter(2,"after2");
+    sut.insertAfter(2, "after2");
     String logo = sut.toString();
     System.out.println(logo);
     assertTrue(logo.contains("{ 1 } -> { 2 } -> { after2 }"));
   }
+
   @Test
-  void testKth(){
+  void testKth() {
     LinkedList sut = new LinkedList();
     sut.insert(3);
     sut.insert("find me");
@@ -88,7 +89,7 @@ public class LinkedListTest {
   }
 
   @Test
-  void testMiddle(){
+  void testMiddle() {
     LinkedList sut = new LinkedList();
     sut.insert(11);
     sut.insert("skip me");
@@ -96,27 +97,10 @@ public class LinkedListTest {
     sut.insert(13);
     sut.insert("skip me");
 
-
     String res = (String) sut.middle();
-    System.out.println("middle val: "+res);
+    System.out.println("middle val: " + res);
     assertTrue(res == "imma middle");
   }
-  @Test
-  void testZip(){
 
-    LinkedList sut1 = new LinkedList();
-    sut1.insert(11);
-    sut1.insert("skip me");
-    sut1.insert("imma middle");
-    sut1.insert(13);
 
-    LinkedList sut2 = new LinkedList();
-    sut2.insert(888);
-    sut2.insert(999);
-    sut2.insert(666);
-    sut2.insert(13);
-
-    LinkedList test = new LinkedList();
-    test.zip(sut1.head,sut2.head);
-  }
 }
