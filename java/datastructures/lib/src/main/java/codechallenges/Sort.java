@@ -15,6 +15,7 @@ public class Sort {
   }
 
   public void mergeSort(int[] arr) {
+
     int n = arr.length, mid = n / 2;
     if (n < 2) return;
 
@@ -55,5 +56,6 @@ public class Sort {
         arr[k++] = right[j++];
       }
     }
+
 }
 

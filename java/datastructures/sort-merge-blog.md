@@ -102,3 +102,6 @@ Java Code:
               }
               }
 
+
+![](images/merge-sort2.png)
+
