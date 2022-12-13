@@ -1,9 +1,6 @@
 package datastructures.linkedlist;
-
-
 public class LinkedList<T> {
-
-  public Node<T> head = null;
+  public Node<T> head;
 
   public int size() {
     int res = 0;
@@ -52,12 +49,15 @@ public class LinkedList<T> {
 
   //day 2 sll monday
   public void append(T val) {
-    Node<T> cur = head;
-//    Node<T> prev = head;
-    while (cur.next != null) {
-      cur = cur.next;
+    if (head == null) {
+      head = new Node<T>(val);
+    } else {
+      Node<T> cur = head;
+      while (cur.next != null) {
+        cur = cur.next;
+      }
+      cur.next = new Node(val);
     }
-    cur.next = new Node(val);
   }
 
   public void insertBefore(T val, T newVal) {
@@ -138,6 +138,7 @@ public class LinkedList<T> {
     return cur.val;
   }
 
+
   //            System.out.println(l1.val + " cur of A-list");
   static LinkedList zip(LinkedList A, LinkedList B) {
       if (A.size() < 1) {
@@ -155,6 +156,7 @@ public class LinkedList<T> {
         b = temp;           //The SWAP. make the stashed item 2 of A (now orphaned) the swapped list B
       }
       return A; //ok not to check B for size since we do not return it.  But check for A - yes.
+
   }
 //  static LinkedList zip(LinkedList A, LinkedList B) { // less fun solution
 //    if (A.head != null && B.head != null) {
