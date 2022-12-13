@@ -1,7 +1,5 @@
 package datastructures.trees;
 
-import datastructures.trees.Node;
-
 class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree {
   public void add(T value) {
     // Adds a new node with that value in the correct location in the binary search tree.
@@ -45,18 +43,18 @@ class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree {
 
   class Main {
     public void main(String[] args) { //JB quick test in main
-//      BinarySearchTree tree = new BinarySearchTree();
-//      tree.add(10);
-//      tree.add(5);
-//      tree.add(15);
-//      tree.add(7);
-//
-//
-//      System.out.println(tree.root.val);
-//      System.out.println(tree.root.left.val);
-//      System.out.println(tree.root.right.val);
-//      System.out.println(tree.root.left.right.val);
-//      System.out.println(tree.contains(7)); //checks true
+      BinarySearchTree tree = new BinarySearchTree();
+      tree.add(10);
+      tree.add(5);
+      tree.add(15);
+      tree.add(7);
+
+
+      System.out.println(tree.root.val);
+      System.out.println(tree.root.left.val);
+      System.out.println(tree.root.right.val);
+      System.out.println(tree.root.left.right.val);
+      System.out.println(tree.contains(7)); //checks true
     }
   }
 }

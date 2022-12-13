@@ -2,13 +2,23 @@ package datastructures.linkedlist;
 public class LinkedList<T> {
   public Node<T> head;
 
-  public void checkArg(LinkedList head) {
+  public int size() {
+    int res = 0;
+    Node cur = head;
+    while (cur != null) {
+      cur = cur.next;
+      res++;
+    }
+    return res;
+  }
+
+  public void checkArgs(LinkedList head) {
     if (head == null) {
       throw new IllegalArgumentException("Null given as arg");
     }
   }
 
-  public void insert(T val) {
+  public void insert(T val) { //insert at the beginning of list, ie new head
     Node<T> newHead = new Node<T>(val);
     newHead.next = head;
     head = newHead;
@@ -128,22 +138,44 @@ public class LinkedList<T> {
     return cur.val;
   }
 
-  public void zip(Node<T> l1, Node<T> l2) {
 
-    Node<T> node1next, node2next;
-
-    while (l1 != null && l2 != null) {
-      node1next = l1.next;
-      l1.next = l2;
-      node1next = node1next;
-
-      node2next = l2.next;
-      l2.next = node1next;
-      l2 = node2next;
-
-    }
-    System.out.println("HEAD" + head);
+  //            System.out.println(l1.val + " cur of A-list");
+  static LinkedList zip(LinkedList A, LinkedList B) {
+      if (A.size() < 1) {
+        //check for empty list
+        System.out.println(A.size()+ " A list is empty");
+        return B;
+      }
+      Node a = A.head;
+      Node b = B.head;
+    System.out.println("is there B?" + b);
+      while (b != null) {
+        Node temp = a.next;     //stash item 2 from listA
+        a.next = b;         //make item 1 on listB the new item 2 on listA
+        a = b;              //make what was the listB item 1 the new listA.
+        b = temp;           //The SWAP. make the stashed item 2 of A (now orphaned) the swapped list B
+      }
+      return A; //ok not to check B for size since we do not return it.  But check for A - yes.
 
   }
+//  static LinkedList zip(LinkedList A, LinkedList B) { // less fun solution
+//    if (A.head != null && B.head != null) {
+//      Node a = A.head;
+//      Node b = B.head;
+//      Node tempA;
+//      Node tempB;
+//      while (a != null && b != null) {
+//        System.out.println(a.val);
+//        tempA = a.next;
+//        tempB = b.next;
+//        a.next = b;
+//        b.next = tempA;
+//        a = tempA;
+//        b = tempB;
+//      }
+//      return A;
+//    }
+//    return null;
+//  }
 
 }
