@@ -1,103 +1,157 @@
 package datastructures.hashmap;
 
-import datastructures.linkedlist.Node;
 import datastructures.linkedlist.LinkedList;
+import datastructures.linkedlist.Node;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.util.Objects.hash;
-
 // NOTE: Does NOT preserve insertion order!
 // WARNING: Don't make K an Object or Character!
 public class HashMap<K, V> {
-  ArrayList<LinkedList<HashMapPair<K, V>>> bucketArrayList;  // using ArrayList instead of array so we can instantiate with a parameterized type
-  int size;
+  ArrayList<LinkedList<HashMapPair<K, V>>> bucket;  // using ArrayList instead of array so we can instantiate with a parameterized type
+  int capacity;
+  int size = 0;
+
+  public HashMap() {
+    capacity = 10;
+    this.bucket = new ArrayList<>(capacity);
+    for (int i = 0; i < this.capacity; i++) {
+      bucket.add(i, new LinkedList<HashMapPair<K, V>>());
+    }
+  }
+
+  public int size() {
+    return size;
+  }
 
   public HashMap(int size) {
     if (size < 1) {
       throw new IllegalArgumentException("HashMap size must be 1 or greater!");
     }
-    this.size = size;
-    this.bucketArrayList = new ArrayList<>(size);
-    // Next part is not required, and is a little inefficient, but it makes writing HashMap operations easier
-    for (int i = 0; i < this.size; i++) {
-      bucketArrayList.add(i, new LinkedList<>());
+    this.capacity = size;
+    this.bucket = new ArrayList<>(size);
+    for (int i = 0; i < this.capacity; i++) {
+      bucket.add(i, new LinkedList<HashMapPair<K, V>>());
     }
   }
 
-  // Make sure to replace if the key is a dupe!
-  public void set(K key, V value) {
+  public void set(K key, V val) {
     int index = hash(key);
+    HashMapPair<K, V> newPair = new HashMapPair<>(key, val); //create
 
-    HashMapPair<K, V> entry = new HashMapPair<>(key, value);
-    if (bucketArrayList.get(index).head != null) { //bucket is not empty
-      LinkedList<HashMapPair<K, V>> bList = bucketArrayList.get(index);
+    if (bucket.get(index) != null) { // using hashed key locate bucket (array list el) in
+      LinkedList<HashMapPair<K, V>> list = bucket.get(index); // id sll list
+      Node<HashMapPair<K, V>> cur = list.head; //                create sll runner
+      while (cur != null && !cur.val.getKey().equals(key)) { //while not null advance through NON-matching KEY el of list
+        cur = cur.next;
+      }
+      if (cur != null && !cur.val.equals(val)) { //once correct key found with  not equal value
+        cur.val.setValue(val);   // set cur val
+        System.out.println("OVER-WRITING VALUE of cur SLL element");
+        return;
+      } else {
+        System.out.println("Looks like this key/val has not yet been set- will add");
+      }
+    }
+    if (size == bucket.size()) {
+      expandCapacity();
+    }
+    LinkedList<HashMapPair<K, V>> list = bucket.get(index);
+    System.out.println("Adding K/V pair!");
+    list.append(newPair);
+    bucket.set(index, list);
+    size++;
+  }
+
+
+  private void setDuringExpand(K key, V val, ArrayList<LinkedList<HashMapPair<K, V>>> newBucketList) {
+    int index = hash(key);
+    HashMapPair<K, V> newPair = new HashMapPair<>(key, val);
+    if (newBucketList.get(index) != null) {
+      LinkedList<HashMapPair<K, V>> list = newBucketList.get(index);
       Node<HashMapPair<K, V>> cur;
-      cur = bList.head;
+      cur = list.head;
       while (cur != null && !cur.val.getKey().equals(key)) {
         cur = cur.next;
       }
-      if (cur != null && !cur.val.getValue().equals(value)) {
-        cur.val.setValue(value);
+      if (cur != null && !cur.val.equals(val)) {
+        cur.val.setValue(val);
         return;
       }
     }
-    LinkedList<HashMapPair<K, V>> bList = bucketArrayList.get(index); //not very dry
-    bList.append(entry);
-    bucketArrayList.set(index, bList);
+    LinkedList<HashMapPair<K, V>> list = newBucketList.get(index);
+    list.append(newPair);
+    newBucketList.set(index, list);
+    size++;
   }
 
   public V get(K key) {
     int index = hash(key);
-    if (bucketArrayList.get(index) != null) {
-      LinkedList<HashMapPair<K, V>> bList = bucketArrayList.get(index);
-      Node<HashMapPair<K, V>> cur = bList.head;
-      while (cur != null) {
-        if (cur.val.getKey().equals(key)) {
-          return cur.val.getValue();
-        }
+    if (bucket.get(index) != null) {
+      LinkedList<HashMapPair<K, V>> list = bucket.get(index);
+      Node<HashMapPair<K, V>> cur;
+      cur = list.head;
+      while (cur != null && !cur.val.getKey().equals(key)) {
         cur = cur.next;
+      }
+      if (cur != null) {
+        return cur.val.getValue();
       }
     }
     return null;
   }
 
   public boolean contains(K key) {
-
     int index = hash(key);
-    if (bucketArrayList.get(index) != null) {
-      LinkedList<HashMapPair<K, V>> bList = bucketArrayList.get(index);
-      Node<HashMapPair<K, V>> cur = bList.head;
-      while (cur != null) {
-        if (cur.val.getKey().equals(key)) return true;
+    if (bucket.get(index) != null) {
+      LinkedList<HashMapPair<K, V>> list = bucket.get(index);
+      Node<HashMapPair<K, V>> cur;
+      cur = list.head;
+      while (cur != null && !cur.val.getKey().equals(key)) {
         cur = cur.next;
       }
+      return cur != null;
     }
     return false;
   }
 
   public List<K> keys() {
-    List<K> allKeys = new ArrayList<>();
-    for (LinkedList<HashMapPair<K, V>> sLList : bucketArrayList) {
-      if (sLList != null) {
-        Node<HashMapPair<K, V>> runner = sLList.head;
-        while (runner != null) {
-          allKeys.add(runner.val.getKey());
-          runner = runner.next;
+    List<K> output = new ArrayList<>();
+    for (LinkedList<HashMapPair<K, V>> list : bucket) {
+      if (list != null) {
+        Node<HashMapPair<K, V>> cur;
+        cur = list.head;
+        while (cur != null) {
+          output.add(cur.val.getKey());
+          cur = cur.next;
         }
       }
     }
-    return allKeys;
+    return output;
   }
 
-
-  // Sometimes hashCode in Java can be negative! So we need to do absolute value
-  // If you really want to hash things yourself, look at https://stackoverflow.com/a/113600/16889809
-  // Don't use Character! Don't use Object! Don't use any object you have not overridden equals() and hashCode() on!
-  // If you do this, things that should collide, won't, because Object.hashCode() is not good
-  // Protip: Testing collisions is easy with Integer, because Integer hashes to its own value
   public int hash(K key) {
-    return Math.abs(key.hashCode()) % size;
+    return Math.abs(key.hashCode()) % capacity;
+  }
+
+  private void expandCapacity() {
+    size = 0;
+    capacity *= 2;
+    ArrayList<LinkedList<HashMapPair<K, V>>> newBucketList = new ArrayList<>(capacity);
+    for (int i = 0; i < capacity; i++) {
+      newBucketList.add(i, new LinkedList<HashMapPair<K, V>>());
+    }
+    for (LinkedList<HashMapPair<K, V>> list : bucket) {
+      if (list != null) {
+        Node<HashMapPair<K, V>> cur;
+        cur = list.head;
+        while (cur != null) {
+          setDuringExpand(cur.val.getKey(), cur.val.getValue(), newBucketList);
+          cur = cur.next;
+        }
+      }
+    }
+    bucket = newBucketList;
   }
 }
