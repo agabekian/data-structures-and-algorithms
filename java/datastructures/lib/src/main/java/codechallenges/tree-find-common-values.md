@@ -1,3 +1,4 @@
+
 ![](../../../../../images/Tree.png)
 
       public static ArrayList<Integer> commonValues(BinaryTree<Integer> t1, BinaryTree<Integer> t2) {
