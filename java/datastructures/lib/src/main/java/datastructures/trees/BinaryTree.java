@@ -3,32 +3,33 @@ package datastructures.trees;
 import datastructures.queue.Queue;
 import datastructures.stack.Stack;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Objects;
 
-class BinaryTree<T> {
-  Node root;
+public class BinaryTree<T extends Comparable<T>> {
+  public Node root;
 
   public BinaryTree() {
   }
 
-  public BinaryTree(Node root) {
+  public BinaryTree(Node<T> root) {
     this.root = root;
   }
 
   // Each depth  first traversal method should return an array of values, ordered appropriately.
-  public Object[] iPreOrder() { //"i"terative solution
-    ArrayList list = new ArrayList();
+  // O(N) / O(N) extra linear ds
+  public Object[] iPreOrder() {
+    //"i"terative solution
+    if (root == null) return null;
+    ArrayList<Object> list = new ArrayList();
     Stack stack = new Stack();
     stack.push(root);
     while (!stack.isEmpty()) {
       Node cur = (Node) stack.pop();
-//      System.out.println("cur is "+cur.val);
+      System.out.println("cur " + cur.val);
       list.add(cur.val);
+      //now check if children exist
       if (cur.right != null) stack.push(cur.right);
       if (cur.left != null) stack.push(cur.left);
-
     }
     return list.toArray();
   }
@@ -38,6 +39,21 @@ class BinaryTree<T> {
 //    preOrder(root, values);
 //    return values.toArray();
 //  }
+
+  public ArrayList<T> bfs() {
+    ArrayList<T> list = new ArrayList<>();
+    Queue<Node<T>> q = new Queue<>();
+    q.enqueue(root);
+    while (!q.isEmpty()) {
+      Node<T> cur = q.dequeue();
+      System.out.println("bfs cur " + cur.val);
+      list.add(cur.val);
+      if (cur.left != null) q.enqueue(cur.left);
+      if (cur.right != null) q.enqueue(cur.right);
+    }
+
+    return list;
+  }
 
   public Object[] preOrder(Node root, ArrayList vals) {
     // node -> left -> right  PLR - DFS
@@ -93,6 +109,7 @@ class BinaryTree<T> {
   // 17 Breadth-first Traversal. w/ Generics. LC102
 
   public ArrayList<T> BFS(BinaryTree<T> tree) {
+    //dont't try to fight stack and qrite recursive bfs;
     Queue<Node<T>> q = new Queue();
     ArrayList<T> list = new ArrayList<>();
     if (tree.root != null) {

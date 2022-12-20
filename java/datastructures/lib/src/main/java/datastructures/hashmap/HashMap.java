@@ -1,9 +1,10 @@
 package datastructures.hashmap;
 
-import datastructures.linkedlist.LinkedList;
-import datastructures.linkedlist.Node;
+import linkedlist.Node;
+import linkedlist.LinkedList;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 // NOTE: Does NOT preserve insertion order!
@@ -80,6 +81,7 @@ public class HashMap<K, V> {
         return;
       }
     }
+
     LinkedList<HashMapPair<K, V>> list = newBucketList.get(index);
     list.append(newPair);
     newBucketList.set(index, list);

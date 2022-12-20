@@ -2,12 +2,11 @@ package datastructures.trees;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import datastructures.trees.BinaryTree;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class TreeBFS {
 

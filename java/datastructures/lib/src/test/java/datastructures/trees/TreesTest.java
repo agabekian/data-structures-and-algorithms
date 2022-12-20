@@ -2,15 +2,14 @@ package datastructures.trees;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import datastructures.trees.BinaryTree;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 
 
 public class TreesTest {
@@ -57,20 +56,22 @@ public class TreesTest {
     b.right = d;
     e.left = f;
     e.right = g;
-
     //              (A)
     //             /   \
     //          (B)     (E)
     //         /   \   /   \
     //       (C)  (D) (F)  (G)
     String[] preExpect = {"A", "B", "C", "D", "E", "F", "G"};
-    String[] postExpect = {"C", "D", "B", "F", "G", "E","A"};
+    String[] postExpect = {"C", "D", "B", "F", "G", "E", "A"};
+    String[] bfsExpect = {"A", "B", "E", "C", "D", "F", "G"};
 
-ArrayList input = new ArrayList();
+    ArrayList input = new ArrayList();
     System.out.println("return of traversal " + sut.iPreOrder() + "xxxxxxxxtest " + preExpect);
-//    assert(Arrays.equals(sut.iPreOrder(), preExpect)); //ierative pre-order
-    assert(Arrays.equals(sut.preOrder(sut.root,input), preExpect)); //recursive pre-order
+    assert (Arrays.equals(sut.iPreOrder(), preExpect)); //ierative pre-order
+//    assert(Arrays.equals(sut.preOrder(sut.root,input), preExpect)); //recursive pre-order
+    assert (Arrays.equals(sut.bfs().toArray(), bfsExpect));
 
 //    assert(Arrays.equals(sut.postOrder(), postExpect)); //recursive pre-order
   }
 }
+//

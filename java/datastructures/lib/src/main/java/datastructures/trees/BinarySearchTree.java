@@ -1,5 +1,7 @@
 package datastructures.trees;
 
+import datastructures.trees.BinaryTree;
+
 class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree {
   public void add(T value) {
     // Adds a new node with that value in the correct location in the binary search tree.

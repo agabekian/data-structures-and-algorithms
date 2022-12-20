@@ -13,11 +13,12 @@
 | [Extending an Implementation: Max Value Binary Tree](./java/datastructures/trees-max-value-readme.md) |
 | [Extending an Implementation: Trees - Breadth First](./java/datastructures/trees-bfs.md)              |
 
-| Code Challenges                                                     |
-|---------------------------------------------------------------------|
-| [Insertion Sort Blog](./java/datastructures/sort-insertion-blog.md) |
-| [Merge Sort Blog](./java/datastructures/sort-merge-blog.md)         |
-| [Hashmap Repeated Word](java/datastructures/lib/src/main/java/codechallenges/hashmap-repeated-word.md)   |
+| Code Challenges                                                                                     |
+|-----------------------------------------------------------------------------------------------------|
+| [Insertion Sort Blog](./java/datastructures/sort-insertion-blog.md)                                 |
+| [Merge Sort Blog](./java/datastructures/sort-merge-blog.md)                                         |
+| [Hashmap Repeated Word](java/datastructures/lib/src/main/java/codechallenges/hashmap-repeated-word.md) |
+| [Tree Intersection ](java/datastructures/lib/src/main/java/codechallenges/tree-find-common-values.md)    |
 
 
 

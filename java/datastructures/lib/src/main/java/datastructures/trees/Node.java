@@ -1,13 +1,13 @@
 package datastructures.trees;
 
-class Node<T> {
-  T val;
-  Node<T> left = null;
-  Node<T> right = null;
+public class Node <T> {
+  public T val;
+  public Node<T> left = null;
+  public Node<T> right = null;
 
   Node() {}
 
-  Node(T val) {
+  public Node(T val) {
     this.val = val;
   }
 

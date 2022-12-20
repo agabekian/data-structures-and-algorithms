@@ -1,6 +1,12 @@
-package datastructures.linkedlist;
+package linkedlist;
+
+
+import java.util.HashMap;
+
 public class LinkedList<T> {
   public Node<T> head;
+
+
 
   public int size() {
     int res = 0;
@@ -108,6 +114,22 @@ public class LinkedList<T> {
     return listLen; //again!
   }
 
+  public boolean isCycle() {
+    HashMap<Node, Integer> map = new HashMap<>();
+    Node cur = head;
+    while (cur.next!= null) {
+      System.out.println("************"+ map.get(cur));
+      if (map.containsKey(cur)) {
+        return true;
+      }
+      map.put(cur, (Integer) cur.val);
+      cur = cur.next;
+
+      System.out.println(cur.val);
+    }
+    return false;
+  }
+
   public T kthFromEnd(T k) {
     int counter = 1;
     reverseLL();
@@ -140,22 +162,22 @@ public class LinkedList<T> {
 
 
   //            System.out.println(l1.val + " cur of A-list");
-  static LinkedList zip(LinkedList A, LinkedList B) {
-      if (A.size() < 1) {
-        //check for empty list
-        System.out.println(A.size()+ " A list is empty");
-        return B;
-      }
-      Node a = A.head;
-      Node b = B.head;
+  public static LinkedList zip(LinkedList A, LinkedList B) {
+    if (A.size() < 1) {
+      //check for empty list
+      System.out.println(A.size() + " A list is empty");
+      return B;
+    }
+    Node a = A.head;
+    Node b = B.head;
     System.out.println("is there B?" + b);
-      while (b != null) {
-        Node temp = a.next;     //stash item 2 from listA
-        a.next = b;         //make item 1 on listB the new item 2 on listA
-        a = b;              //make what was the listB item 1 the new listA.
-        b = temp;           //The SWAP. make the stashed item 2 of A (now orphaned) the swapped list B
-      }
-      return A; //ok not to check B for size since we do not return it.  But check for A - yes.
+    while (b != null) {
+      Node temp = a.next;     //stash item 2 from listA
+      a.next = b;         //make item 1 on listB the new item 2 on listA
+      a = b;              //make what was the listB item 1 the new listA.
+      b = temp;           //The SWAP. make the stashed item 2 of A (now orphaned) the swapped list B
+    }
+    return A; //ok not to check B for size since we do not return it.  But check for A - yes.
 
   }
 //  static LinkedList zip(LinkedList A, LinkedList B) { // less fun solution
