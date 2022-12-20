@@ -1,7 +1,9 @@
 package datastructures.linkedlist;
 
-import org.checkerframework.framework.qual.LiteralKind;
+import linkedlist.LinkedList;
+import linkedlist.Node;
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -12,9 +14,10 @@ public class LinkedListTest {
     LinkedList sut = new LinkedList();
     sut.insert(11);
     sut.insert(13);
-    int head = (int) sut.head.val;
-    System.out.println(head);
-    assertTrue(head == 13);
+
+    int headVal = (int) sut.head.val;
+    System.out.println(headVal);
+    assertTrue(headVal == 13);
   }
 
   @Test
@@ -100,7 +103,32 @@ public class LinkedListTest {
     String res = (String) sut.middle();
     System.out.println("middle val: " + res);
     assertTrue(res == "imma middle");
+    sut.isCycle();
   }
-
+@Test
+  void testCycle() {
+    LinkedList sut = new LinkedList();
+    sut.insert(11);
+    sut.insert("skip me");
+    sut.insert("imma middle");
+    sut.insert(13);
+    sut.insert("skip me");
+  System.out.println(sut.toString());
+  System.out.println(sut.isCycle());
+  }
+  @Test
+  void setCycle() {
+    LinkedList sut = new LinkedList();
+    Node one = new Node(5);
+    Node two = new Node(13);
+    Node three = new Node(3);
+    sut.insert(11);
+    sut.head.next = one;
+    System.out.println(sut.head.next.val);
+    one.next = two;
+    two.next = three;
+    three.next = null;
+    System.out.println(sut.isCycle());
+  }
 
 }

@@ -1,5 +1,6 @@
 package datastructures.linkedlist;
 
+import linkedlist.LinkedList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -27,8 +28,6 @@ public class ZipListsTest {
     System.out.println("Resulting list as string : " + result);
     String comp = "{ 11 } -> { 888 } -> { skip me } -> { 999 } -> { imma middle } -> { 666 } -> { 13 } -> { dude } -> NULL";
     assertEquals(result.toString(), comp);
-
-
   }
 }
 

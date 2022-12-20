@@ -1,6 +1,6 @@
 package datastructures.stack;
 
-import datastructures.linkedlist.Node;
+import linkedlist.Node;
 import java.util.NoSuchElementException;
 
 

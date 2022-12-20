@@ -3,7 +3,7 @@ package codechallenges;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HashMap {
+public class HashMapChallenges {
   public static String firstRepeatedWord(String str) {
     Set<String> map = new HashSet<>();
     String word = "";
