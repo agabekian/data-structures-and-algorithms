@@ -18,7 +18,8 @@
 | [Insertion Sort Blog](./java/datastructures/sort-insertion-blog.md)                                 |
 | [Merge Sort Blog](./java/datastructures/sort-merge-blog.md)                                         |
 | [Hashmap Repeated Word](java/datastructures/lib/src/main/java/codechallenges/hashmap-repeated-word.md) |
-| [Tree Intersection ](java/datastructures/lib/src/main/java/codechallenges/tree-find-common-values.md)    |
+| [Tree Intersection ](java/datastructures/lib/src/main/java/codechallenges/tree-find-common-values.md) |
+| [Hashmap Left Join ](java/datastructures/lib/src/main/java/codechallenges/hashmap-left-join.md)     |
 
 
 
