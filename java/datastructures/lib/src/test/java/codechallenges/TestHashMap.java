@@ -52,4 +52,26 @@ public class TestHashMap {
       assertTrue(k.contains("String"));
     }
   }
+
+  @Test
+  void testAutoBio() {
+    assertTrue(HashMapChallenges.autoBioHash("2020") == true);
+    assertTrue(HashMapChallenges.autoBioHash("2021") == false);
+    assertTrue(HashMapChallenges.autoBioHash("6210001000") == true);
+  }
+
+  @Test
+  void testAutoBioHash() {
+    assertTrue(HashMapChallenges.autoBioHash("2020") == true);
+    assertTrue(HashMapChallenges.autoBioHash("2021") == false);
+    assertTrue(HashMapChallenges.autoBioHash("6210001000") == true);
+  }
+
+  @Test
+  void testAutoBioOpt() { //faster
+    assertTrue(HashMapChallenges.autoBioHash("2020") == true);
+    assertTrue(HashMapChallenges.autoBioHash("2021") == false);
+    assertTrue(HashMapChallenges.autoBioHash("6210001000") == true);
+  }
 }
+

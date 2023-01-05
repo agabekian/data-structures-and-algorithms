@@ -1,7 +1,7 @@
 package datastructures.hashmap;
 
-import linkedlist.Node;
-import linkedlist.LinkedList;
+import linkedlist2.Node;
+import linkedlist2.LinkedList;
 
 import java.util.ArrayList;
 

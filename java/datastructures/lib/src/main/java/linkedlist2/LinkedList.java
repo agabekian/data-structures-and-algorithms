@@ -1,11 +1,15 @@
-package linkedlist;
+package linkedlist2;
 
 
+import com.google.common.base.Joiner;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class LinkedList<T> {
   public Node<T> head;
-
 
 
   public int size() {
@@ -117,8 +121,8 @@ public class LinkedList<T> {
   public boolean isCycle() {
     HashMap<Node, Integer> map = new HashMap<>();
     Node cur = head;
-    while (cur.next!= null) {
-      System.out.println("************"+ map.get(cur));
+    while (cur.next != null) {
+      System.out.println("************" + map.get(cur));
       if (map.containsKey(cur)) {
         return true;
       }
@@ -178,9 +182,9 @@ public class LinkedList<T> {
       b = temp;           //The SWAP. make the stashed item 2 of A (now orphaned) the swapped list B
     }
     return A; //ok not to check B for size since we do not return it.  But check for A - yes.
-
   }
-//  static LinkedList zip(LinkedList A, LinkedList B) { // less fun solution
+
+  //  static LinkedList zip(LinkedList A, LinkedList B) { // less fun solution
 //    if (A.head != null && B.head != null) {
 //      Node a = A.head;
 //      Node b = B.head;
@@ -199,5 +203,17 @@ public class LinkedList<T> {
 //    }
 //    return null;
 //  }
+  public void addOne() {
+    Node cur = head;
+    ArrayList nums = new ArrayList();
+    while (cur != null) {
+      nums.add(cur.val);
+      cur = cur.next;
+    }
+    String print = Joiner.on("").join(nums);
+    System.out.println("JOIN"+print);
+    System.out.println("Arr with vals"+nums.toString());
+  }
+
 
 }

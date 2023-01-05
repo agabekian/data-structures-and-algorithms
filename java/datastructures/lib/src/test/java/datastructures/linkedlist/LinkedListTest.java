@@ -1,7 +1,7 @@
 package datastructures.linkedlist;
 
-import linkedlist.LinkedList;
-import linkedlist.Node;
+import linkedlist2.LinkedList;
+import linkedlist2.Node;
 import org.junit.jupiter.api.Test;
 
 
@@ -115,6 +115,17 @@ public class LinkedListTest {
     sut.insert("skip me");
   System.out.println(sut.toString());
   System.out.println(sut.isCycle());
+  }
+
+  @Test
+  void testAddOne() {
+    LinkedList sut = new LinkedList();
+    sut.insert(9);
+    sut.insert(9);
+    sut.insert(9);
+    sut.insert(1);
+//    System.out.println(sut.toString()); //1999
+    sut.addOne();
   }
   @Test
   void setCycle() {
