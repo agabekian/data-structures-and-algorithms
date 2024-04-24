@@ -140,7 +140,6 @@ const fizzbuzz = (arr) => {
     else if (el % 5 === 0) res.push("Buzz");
     else res.push(el);
   })
-
   return res;
 };
 
