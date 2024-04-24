@@ -86,8 +86,8 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = arr => arr.map(el => typeof el === 'number'
-    ? (el % 2 === 0 ? "even" : "odd")
-    : "N/A");
+  ? (el % 2 === 0 ? "even" : "odd")
+  : "N/A");
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
@@ -130,9 +130,8 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
-const extractAbilities = () => {
-  // Solution code here...
-};
+const extractAbilities = () => snorlaxAbilities.abilities
+  .map(el => el.ability.name);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -177,9 +176,12 @@ const snorlaxStats = {
   weight: 4600,
 };
 
-const extractStats = (arr) => {
-  // Solution code here...
-};
+const extractStats = arr => snorlaxStats.stats.map(
+  el => new Object(
+    {
+      "name": el.stat.name, "total": el.baseStat + el.effort
+    }
+  ));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -272,14 +274,14 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities()).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities().length).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
       {name: 'speed', total: 35,},
