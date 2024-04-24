@@ -49,7 +49,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = arr => {
-  let res = [];
+  const res = [];
   arr.forEach(el => res.push(Math.pow(2, el)));
   return res;
 }
@@ -65,16 +65,15 @@ const mapTwoToThe = arr => arr.map(el => Math.pow(2, el));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
-Write a function named charCode that, given an array of letters as an input, uses map to return a new array where each element is the result of the `charCodeAt` method on the original array element.
+Write a function named charCode that, given an array of letters as an input,
+uses map to return a new array where each element is the result of the `charCodeAt` method on the original array element.
 
 Read the MDN documentation on String.charCodeAt() if necessary.
 
 For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
-const charCode = (arr) => {
-  // Solution code here...
-};
+const charCode = arr => arr.map(el => el.charCodeAt(0));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -86,14 +85,13 @@ If any element in the array is not a number, the resulting array should have the
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
-const evenOdd = (arr) => {
-  // Solution code here...
-};
-
+const evenOdd = arr => arr.map(el => typeof el === 'number'
+    ? (el % 2 === 0 ? "even" : "odd")
+    : "N/A");
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
-Use the snorlaxAbilities data, below, for this challenge.
+Use the snorlax Abilities data, below, for this challenge.
 
 Write a function named extractAbilities that, given the array of abilities, uses map to create an array containing only the ability name.
 
@@ -132,7 +130,7 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
-const extractAbilities = (arr) => {
+const extractAbilities = () => {
   // Solution code here...
 };
 
@@ -245,14 +243,14 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([67, 111, 100, 101, 51, 48, 49]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing the keys from an object', () => {
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual(['odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd']);
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
@@ -276,8 +274,8 @@ xdescribe('Testing challenge 8', () => {
 
 xdescribe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
-    expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
-    expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
+    expect(extractAbilities()).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
+    expect(extractAbilities().length).toStrictEqual(3);
   });
 });
 
