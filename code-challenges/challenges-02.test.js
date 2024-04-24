@@ -179,7 +179,8 @@ const snorlaxStats = {
 const extractStats = arr => snorlaxStats.stats.map(
   el => new Object(
     {
-      "name": el.stat.name, "total": el.baseStat + el.effort
+      "name": el.stat.name,
+      "total": el.baseStat + el.effort
     }
   ));
 
