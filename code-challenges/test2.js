@@ -76,4 +76,14 @@ const got = [
   },
 ];
 
-got.forEach(el => console.log(Object.keys(el).includes('children')))
+const hasChildrenValues = (arr, character) => {
+  console.log("houses")
+  for (let house of arr) {
+    if (house.name == character) {
+      return house.children !== 'undefined'
+    }
+  }
+  return false;
+}
+
+console.log(hasChildrenValues(got, "Sansa"));
