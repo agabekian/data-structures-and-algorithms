@@ -7,8 +7,9 @@ Write a function that finds the maximum value in an array.
 
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
-const maxInArray = (arr) => {
-  // Solution code here...
+const maxInArray = arr => {
+  // return Math.max.apply(Math, arr);
+  return Math.max(...arr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -18,14 +19,13 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: {dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
-const getCourseKeys = (obj) => {
-  // Solution code here...
-};
+const getCourseKeys = obj => Object.keys(obj);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -35,14 +35,12 @@ Write a function named checkValues that takes in an object and a value and retur
 
 ------------------------------------------------------------------------------------------------ */
 
-const checkValues = (obj, value) => {
-  // Solution code here...
-};
+const checkValues = (obj, value) => Object.values(obj).includes(value) ? true : false;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this:
+You are given an object with names and their corresponding phone numbers that looks like this:
 {
   'Grace Hopper': '222-303-5938',
   'Ada Lovelace': '222-349-9842',
@@ -58,11 +56,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
-const updateNumbers = (obj) => {
-  // Solution code here...
+const updateNumbers = obj => {
+  const res = [];
+  Object.entries(obj).forEach(([key, value]) => res.push(key + ": " + value));
+  // for (const [key, value] of Object.entries(obj))
+  return res;
 };
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -113,9 +112,9 @@ const characters = [
   },
 ];
 
-const getHouses = (arr) => {
+const getHouses = (obj) => {
   let houses = [];
-  // Solution code here...
+  obj.forEach(el => houses.push(el.house));
   return houses;
 };
 
@@ -132,7 +131,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  return arr.forEach( character.includes('children'));
 
 };
 
@@ -226,11 +225,11 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should return true if the value is in the object', () => {
-    expect(checkValues({ class: '301' }, '301')).toBe(true);
+    expect(checkValues({class: '301'}, '301')).toBe(true);
   });
 
   test('It should return false if the value is not in the object', () => {
-    expect(checkValues({ class: '301' }, '401')).toBe(false);
+    expect(checkValues({class: '301'}, '401')).toBe(false);
   });
 });
 
@@ -282,13 +281,13 @@ xdescribe('Testing challenge 8', () => {
 
 xdescribe('Testing challenge 9', () => {
   test('It should return an object for each house containing the name and size', () => {
-    expect(houseSize(characters)[1]).toStrictEqual({ house: 'Arryn', members: 3 });
+    expect(houseSize(characters)[1]).toStrictEqual({house: 'Arryn', members: 3});
     expect(houseSize(characters).length).toStrictEqual(7);
   });
 });
 
 xdescribe('Testing challenge 10', () => {
   test('It should not include any deceased spouses', () => {
-    expect(houseSurvivors(characters)[2]).toStrictEqual({ house: 'Lannister', members: 4 });
+    expect(houseSurvivors(characters)[2]).toStrictEqual({house: 'Lannister', members: 4});
   });
 });
