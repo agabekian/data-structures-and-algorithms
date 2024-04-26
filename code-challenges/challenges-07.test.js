@@ -76,7 +76,7 @@ Here is an example of the input:
   {name: 'Sweatshirt', price: 45},
   {name: 'Bookmark', price: 2.50},
   {name: 'Tote bag', price: 15}
-];
+];m
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = arr => arr.sort((a, b) => a.price - b.price);

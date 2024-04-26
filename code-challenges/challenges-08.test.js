@@ -24,9 +24,7 @@ let starWarsPeople = [
   }
 ];
 
-const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
-};
+const sortStarWarsCharacters = (starWarsArr) => starWarsArr.sort((a, b) => b.height - a.height);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,7 +33,8 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  arr.splice(idx, 3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,9 +43,8 @@ CHALLENGE 3
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
 
-const joinArray = (arr) => {
-  // Solution code here...
-};
+const joinArray = arr => arr.join(" ");
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -63,7 +61,11 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  let i = 0;
+  while (i <= str.length) {
+    result.push(str.slice(i, str.length));
+    i++;
+  }
   return result;
 };
 
@@ -75,10 +77,11 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
-};
-
+const wordsToCharList = arr => arr.split("")
+  .reduce((charArr, char) => {
+    charArr.push(char);
+    return charArr
+  }, []);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -123,7 +126,9 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i = 0; i < recipe.length; i++) {
+
+  }
   return result;
 };
 
