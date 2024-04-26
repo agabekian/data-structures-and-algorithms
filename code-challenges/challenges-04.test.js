@@ -27,8 +27,11 @@ Prove that the original people array is unchanged
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPeople = (arr) => {
-  // Solution code here...
+const addPeople = arr => {
+  const newPeople = [...arr];
+  newPeople.unshift("Odie");
+  newPeople.push("Garfield");
+  return newPeople;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,10 +46,25 @@ In the setSate function, use spread and destructuring assignments to:
 Ensure that the original people array and stuff objects are unchanged
 
 ------------------------------------------------------------------------------------------------ */
-
+// Array.prototype.push returns the length of the array
+// after pushing an item which is why you get an unexpected result,
+// you should use Array.prototype.concat instead which retuns
+// a new array upon addition of the element
 const setState = (arr, obj) => {
-  // Solution code here...
-};
+  const people = [...arr];
+  let {tv, radio, toys, toothbrush, cars} = obj;
+  return {
+    people,
+    "stuff":
+      {
+        cars,
+        radio,
+        toothbrush,
+        toys,
+        tv
+      }
+  };
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +84,25 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr, obj) => {
-  // Solution code here...
+  const people = [...arr];
+  const {
+    tv, radio, toys,
+    toys2 = toys + 1,
+    toothbrush, toothbrush2 = "brand new",
+    cars, cars2 = cars.concat("Ford") //do not push lol
+  } = obj;
+
+  return {
+    people,
+    "stuff":
+      {
+        cars:cars2,
+        radio,
+        toothbrush:toothbrush2,
+        toys:toys2,
+        tv
+      }
+  };
 };
 
 
