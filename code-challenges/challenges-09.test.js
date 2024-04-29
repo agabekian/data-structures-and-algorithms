@@ -22,7 +22,8 @@ For example:
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
-const getNames = arr => arr.map(el => el.name.split("").reverse().join(""));;
+const getNames = arr => arr.map(el => el.name.split("").reverse().join(""));
+;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -31,8 +32,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => {
-  // Solution code here...
+const appendTheEnd = str => {
+  return str.slice().concat(' The end.');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,8 +49,8 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
-const appendFirstToLast = (arr) => {
-  // Solution code here...
+const appendFirstToLast = arr => {
+  arr.splice(arr.length, 0, arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +69,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  obj["yearBorn"] = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,7 +122,11 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([{name: 'lloyd', age: 32, shoeSize: 12}, {
+      name: 'jamie',
+      age: 21,
+      shoeSize: 8
+    }])).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
@@ -147,7 +152,7 @@ describe('Testing challenge 3', () => {
 
 describe('Testing challenge 4', () => {
   test('It should add a property to an object', () => {
-    const a = { fullName: 'Octavia Butler' };
+    const a = {fullName: 'Octavia Butler'};
     addBirthYearProperty(a, 1947);
 
     expect(a.yearBorn).toStrictEqual(1947);
@@ -156,7 +161,7 @@ describe('Testing challenge 4', () => {
 
 xdescribe('Testing challenge 5', () => {
   test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    const a = [{fullName: 'Octavia Butler'}, {fullName: 'Ray Bradbury'}, {fullName: 'Kurt Vonnegut'}];
     setStatusAsAuthor(a);
 
     expect(a[0].isAuthor).toStrictEqual(true);
