@@ -55,7 +55,7 @@
       <option name="m_reportEmptyBlocks" value="false" />
     </inspection_tool>
     <inspection_tool class="EmptyTryBlockJS" enabled="false" level="ERROR" enabled_by_default="false" editorAttributes="TEXT_STYLE_WARNING" />
-    <inspection_tool class="Eslint" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="TEXT_STYLE_WARNING" />
+    <inspection_tool class="Eslint" enabled="false" level="ERROR" enabled_by_default="false" editorAttributes="TEXT_STYLE_WARNING" />
     <inspection_tool class="ExceptionCaughtLocallyJS" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="TEXT_STYLE_WARNING" />
     <inspection_tool class="FallThroughInSwitchStatementJS" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="TEXT_STYLE_WARNING" />
     <inspection_tool class="FlowJSConfig" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="TEXT_STYLE_WARNING" />

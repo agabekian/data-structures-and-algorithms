@@ -4,7 +4,7 @@
 
 ### Folder and Challenge Setup
 
-Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
+**Each** type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
 
 ### Data Structure: New Implementation
 
@@ -37,8 +37,7 @@ Each type of code challenge has slightly different instructions. Please refer to
       - i.e. `const LinkedList = require('../index');
 
 ### Data Structure: Extending an implementation
-
-- Work within the data structure implementation
+ Work within the data structure implementation
 - Create a new method within the class that solves the code challenge
   - Remember, you'll have access to `this` within your class methods
 - Tests
