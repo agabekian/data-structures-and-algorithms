@@ -13,4 +13,18 @@ We add/insert value into array at the index <p>
 _Time Complexity:_ O(N) - we iterate over input array once. <p>
 
 ## Solution
-n/a
+```
+function arrayInsert(arr, num) {
+
+let mid = Math.floor(arr.length / 2)
+
+for (let i = arr.length; i > mid; i--) {
+
+    arr[i] = arr[i - 1];
+
+}
+
+arr[mid] = num;
+
+return arr;
+}
