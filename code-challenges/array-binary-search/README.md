@@ -3,7 +3,7 @@
 # Challenge Title
 Wtrite a Binary Search Algo
 ## Whiteboard Process
-![code2.png](./code2.png)
+![code2.png](./binary_search.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
