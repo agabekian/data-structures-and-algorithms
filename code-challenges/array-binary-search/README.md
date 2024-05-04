@@ -27,7 +27,7 @@ Else return the index of the key value.
 _Time Complexity:_ O(log N) -
 "Divide and Conquer" makes it log n. <p>
 
-## Solution
+## Solution.
 ```
 function binSearch(arr, key) {
   let l = 0, r = arr.length - 1;
