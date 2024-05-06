@@ -1,13 +1,7 @@
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
+const Node = require('./SLLNode');
 
 class LinkedList {
-  constructor(head) {
-    this.head = head;
+  constructor(head) {this.head = head;
   }
 
   insert(node) {
