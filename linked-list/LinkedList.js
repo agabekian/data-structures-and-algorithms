@@ -5,6 +5,17 @@ class LinkedList {
         this.head = head;
     }
 
+    iterate(){
+        let cur = this.head
+        let counter = 0;
+        while(head!= null) {
+            cur = cur.next;
+            counter+=1;
+        }
+
+        return counter
+    }
+
     insert(node) {
         this.head = node;
     }
@@ -80,10 +91,13 @@ let node1 = new Node(11);
 let node2 = new Node(8);
 node1.next = node2;
 let testChain = new LinkedList();
-testChain.insert(node1);
-let nodeToIns = new Node(13);
-testChain.insertBefore(8, nodeToIns);
-testChain.toString()
-let nodeToInsAfter = new Node(999)
-testChain.insertAfter(11, nodeToInsAfter)
-console.log(testChain.toString());
+// testChain.insert(node1);
+// let nodeToIns = new Node(13);
+// testChain.insertBefore(8, nodeToIns);
+// testChain.toString()
+// let nodeToInsAfter = new Node(999)
+// testChain.insertAfter(11, nodeToInsAfter)
+// console.log(testChain.toString());
+
+
+module.exports =  LinkedList;
