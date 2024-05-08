@@ -3,7 +3,6 @@ const Node =  require('../SLLNode.js');
 const LinkedList = require('../LinkedList.js');
 
 // Require our linked list implementation
-
 describe('LinkedList', () => {
   it('works', () => {
     expect(true).toBeTruthy();
