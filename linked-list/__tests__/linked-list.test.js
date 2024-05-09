@@ -12,7 +12,7 @@ describe('LinkedList', () => {
         expect(linkedList.head).toEqual(null);
     });
 
-    //###### CODE CH 6 ##########
+    //###### CC 06 ##########
     //append method test add node to the end of the list
     it('should append value ', () => {
         const ll = new LinkedList();
@@ -42,6 +42,8 @@ describe('LinkedList', () => {
            expect(ll.head.next.val).toEqual(33)  //after 2
         && expect(ll.head.next.next.val).toEqual(3); // and before 3
     })
+
+    // ############## CC08 ###################
     it('should have a merged "zipped" list after zip ', () => {
         const l1 = new LinkedList();
         l1.append(1);
