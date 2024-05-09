@@ -85,12 +85,13 @@ class LinkedList {
         throw new Error('Target value not found.');
     }
 
-    insertAfter(target, node) {
+    insertAfter(target, val) {
+        let newNode = new Node(val);
         let cur = this.head;
         while (cur != null) {
             if (cur.val === target) {
-                node.next = cur.next;
-                cur.next = node;
+                newNode.next = cur.next;
+                cur.next = newNode;
             }
             cur = cur.next;
         }
