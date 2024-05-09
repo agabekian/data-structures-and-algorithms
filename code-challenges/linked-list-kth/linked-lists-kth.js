@@ -10,11 +10,11 @@ function kthFromEnd(k) {
             return null;
     }
 
-    let fast = this.head;
+    let it  = this.head;
     while (slow.next) {
         slow = slow.next;
-        fast = fast.next;
+        secondPointer = secondPointer.next;
     }
 
-    return fast.value;
+    return secondPointer.value;
 }
