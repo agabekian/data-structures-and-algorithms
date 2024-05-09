@@ -1,20 +1,21 @@
 const Node = require('./SLLNode');
 
 class LinkedList {
-    constructor(head) {
-        this.head = head;
+    constructor() {
+        this.head = null;
     }
 
-    iterate(){
+    iterate() {
         let cur = this.head
         let counter = 0;
-        while(head!= null) {
+        while (cur) {
+            console.log("cur",cur.val);
             cur = cur.next;
-            counter+=1;
+            counter += 1;
         }
-
         return counter
     }
+
 
     insert(node) {
         this.head = node;
@@ -42,29 +43,39 @@ class LinkedList {
     }
 
 // ################ code ch 6 ############
-    append(node) {
-        let cur = this.head;
-        while (cur.next != null) {
-            cur = cur.next;
+
+    append(val) {
+        const newNode = new Node(val);
+
+        // If the linked list is empty, make the new node the head
+        if (!this.head) {
+            this.head = newNode;
+            return;
         }
-        cur.next = node;
+        // Traverse the list to find the last node
+        let cur = this.head;
+        while (cur.next)
+            cur = cur.next;
+        // Append the new node to the last node
+        cur.next = newNode;
     }
 
-    insertBefore(target, node) {
+    insertBefore(target, val) {
+        let newNode = new Node(val);
         let cur = this.head;
 
         if (this.head.val === target) { //EDGE if before head
-            node.next = this.head;
-            this.head = node;
+            newNode.next = this.head;
+            this.head = newNode;
             return;
         }
         let prev = null;
         while (cur != null) {
             if (cur.val === target) {
-                // Insert t
-                node.next = cur;
+                // Insert
+                newNode.next = cur;
                 if (prev !== null)
-                    prev.next = node;
+                    prev.next = newNode;
                 return;
             }
             prev = cur;
@@ -85,19 +96,40 @@ class LinkedList {
         }
         throw new Error('This is the end, no value found.');
     }
+
+    // ###############CODE CH 7 ############
+    kthFromEnd(k) {
+        let cur = this.head;
+        let slow = cur;
+        let i = 0;
+        while (i < k) {
+            cur = cur.next; //pre-roll
+        }
+        while (cur != null) {
+            cur = cur.next;
+            slow = slow.next;
+        }
+        return slow.val;
+    }
 }
 
-let node1 = new Node(11);
-let node2 = new Node(8);
+
+let node1 = new Node(8);
+let node2 = new Node(11);
+let nodeToIns = new Node(13);
+let nodeToInsLast = new Node(1978);
+
 node1.next = node2;
+node2.next = nodeToIns;
+
 let testChain = new LinkedList();
-// testChain.insert(node1);
-// let nodeToIns = new Node(13);
+testChain.append(999);
+
 // testChain.insertBefore(8, nodeToIns);
-// testChain.toString()
+testChain.toString()
 // let nodeToInsAfter = new Node(999)
 // testChain.insertAfter(11, nodeToInsAfter)
 // console.log(testChain.toString());
 
 
-module.exports =  LinkedList;
+module.exports = LinkedList;

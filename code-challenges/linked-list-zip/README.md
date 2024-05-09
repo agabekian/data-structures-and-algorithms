@@ -73,7 +73,7 @@ _While both current1 and current2 are not None:_
 
 Save "next" pointers:  
 > next1 = next node of cur1  
-next2 = next node of cur2
+next2 = next node of current2
 
 Point current **1**'s next to current **2**:
 
