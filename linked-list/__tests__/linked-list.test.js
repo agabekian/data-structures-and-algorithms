@@ -1,8 +1,8 @@
 'use strict';
 
 const Node = require('../SLLNode.js');
-const LinkedList = require('code-challenges/linked-list-zip/zipLists');
-const zipLists = require('code-challenges/linked-list-zip/zipLists.js');
+const LinkedList = require('../LinkedList');
+const zipLists = require('../../../data-structures-and-algorithms/code-challenges/linked-list-zip/zipLists');
 // Require our linked list implementation
 describe('LinkedList', () => {
     it('checking if test file works', () => expect(true).toBeTruthy());
@@ -54,19 +54,14 @@ describe('LinkedList', () => {
         l2.append(33);
 
         const expected = new LinkedList();
-        l2.append(1);
-        l2.append(11);
-        l2.append(2);
-        l2.append(22);
-        l2.append(3);
-        l2.append(33);
+        expected.append(1);
+        expected.append(11);
+        expected.append(2);
+        expected.append(22);
+        expected.append(3);
+        expected.append(33);
 
-        let res = zipLists(l1,l2)
-        expect(res).toEqual(Expected)  //after 2
-
+        const result = zipLists(l1,l2)
+        expect(result).toEqual(expected)  //after 2
     })
-
 });
-// it('should return the head of the list', () => {
-
-// ... other tests

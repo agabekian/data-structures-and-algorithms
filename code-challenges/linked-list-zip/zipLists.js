@@ -1,6 +1,7 @@
+const Node = require('../../linked-list/SLLNode');
+const LinkedList = require('../../linked-list/LinkedList');
 
-
-export function zipLists(list1, list2) {
+function zipLists(list1, list2) {
     if (!list1 && !list2) return null;
     if (!list1 || !list2) {
         return list1 || list2;
@@ -26,7 +27,7 @@ export function zipLists(list1, list2) {
 }
 
 //for tests
-
+//
 let node1 = new Node(11);
 let node2 = new Node(8);
 
@@ -44,7 +45,7 @@ l2.insert(node3);
 
 
 
-const mergedList = zip(l1, l2); //expect 11,101,8,808,13,null
+const mergedList = zipLists(l1, l2); //expect 11,101,8,808,13,null
 
 let currentNode = mergedList.head;
 while (currentNode) {
@@ -59,3 +60,4 @@ while (currentNode) {
 // testChain.insertAfter(11, nodeToInsAfter)
 // console.log(testChain.toString());
 
+module.exports = zipLists;
