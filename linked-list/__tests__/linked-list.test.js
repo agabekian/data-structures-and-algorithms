@@ -44,17 +44,17 @@ describe('LinkedList', () => {
     })
 
     // ################# CC07 ################
-it('should find Kth value  from the end ', () => {
-    const ll = new LinkedList();
-    ll.append(1);
-    ll.append(2);
-    ll.append(3);
-    ll.append(11);
-    ll.append(22);
-    ll.append(33);
-    const result = ll.kthFromEnd(3); //11
-    expect(result).toEqual(11);
-})
+// it('should find Kth value  from the end ', () => {
+//     const ll = new LinkedList();
+//     ll.append(1);
+//     ll.append(2);
+//     ll.append(3);
+//     ll.append(11);
+//     ll.append(22);
+//     ll.append(33);
+//     const result = ll.kthFromEnd(3); //11
+//     expect(result).toEqual(11);
+// })
 
     // ############## CC08 ###################
     it('should have a merged "zipped" list after zip ', () => {

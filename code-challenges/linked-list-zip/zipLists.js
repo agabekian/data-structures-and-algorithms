@@ -1,4 +1,5 @@
-
+const Node = require('../../linked-list/SLLNode.js');
+const LinkedList = require('../../linked-list/LinkedList');
 
 function zipLists(list1, list2) {
     if (!list1 && !list2) return null;
@@ -70,4 +71,4 @@ function isPali(head) {
 }
 
 console.log(isPali(l1))
-
+module.exports = zipLists;
