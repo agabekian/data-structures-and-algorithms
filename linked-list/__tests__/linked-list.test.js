@@ -12,7 +12,7 @@ describe('LinkedList', () => {
         expect(linkedList.head).toEqual(null);
     });
 
-    //###### CODE CH 6 ##########
+    //###### CC 06 ##########
     //append method test add node to the end of the list
     it('should append value ', () => {
         const ll = new LinkedList();
@@ -21,7 +21,7 @@ describe('LinkedList', () => {
         ll.append(3);
         // ll.iterate();
         expect(ll.head.val).toEqual(1)
-        && expect(ll.head.next.next.val).toEqual(3) ;
+        && expect(ll.head.next.next.val).toEqual(3);
     })
     //insertBefore method before target value - here 22 in front of 2
     it('should insert value before target ', () => {
@@ -29,8 +29,8 @@ describe('LinkedList', () => {
         ll.append(1);
         ll.append(2);
         ll.append(3);
-        ll.insertBefore(2,22)
-        expect(ll.head.next.val).toEqual(22) ;
+        ll.insertBefore(2, 22)
+        expect(ll.head.next.val).toEqual(22);
     })
 
     it('should insert value AFTER target ', () => {
@@ -38,10 +38,25 @@ describe('LinkedList', () => {
         ll.append(1);
         ll.append(2);
         ll.append(3);
-        ll.insertBefore(2,33)
-           expect(ll.head.next.val).toEqual(33)  //after 2
+        ll.insertBefore(2, 33)
+        expect(ll.head.next.val).toEqual(33)  //after 2
         && expect(ll.head.next.next.val).toEqual(3); // and before 3
     })
+
+    // ################# CC07 ################
+// it('should find Kth value  from the end ', () => {
+//     const ll = new LinkedList();
+//     ll.append(1);
+//     ll.append(2);
+//     ll.append(3);
+//     ll.append(11);
+//     ll.append(22);
+//     ll.append(33);
+//     const result = ll.kthFromEnd(3); //11
+//     expect(result).toEqual(11);
+// })
+
+    // ############## CC08 ###################
     it('should have a merged "zipped" list after zip ', () => {
         const l1 = new LinkedList();
         l1.append(1);
@@ -61,7 +76,9 @@ describe('LinkedList', () => {
         expected.append(3);
         expected.append(33);
 
-        const result = zipLists(l1,l2)
+
+        const result = zipLists(l1, l2)
+
         expect(result).toEqual(expected)  //after 2
     })
 });

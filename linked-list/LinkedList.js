@@ -98,7 +98,7 @@ class LinkedList {
         throw new Error('This is the end, no value found.');
     }
 
-    // ###############CODE CH 7 ############
+    // ############### CC 7 ############
     kthFromEnd(k) {
         let cur = this.head;
         let slow = cur;
@@ -114,23 +114,6 @@ class LinkedList {
     }
 }
 
-
-let node1 = new Node(8);
-let node2 = new Node(11);
-let nodeToIns = new Node(13);
-let nodeToInsLast = new Node(1978);
-
-node1.next = node2;
-node2.next = nodeToIns;
-
-let testChain = new LinkedList();
-testChain.append(999);
-
-// testChain.insertBefore(8, nodeToIns);
-testChain.toString()
-// let nodeToInsAfter = new Node(999)
-// testChain.insertAfter(11, nodeToInsAfter)
-// console.log(testChain.toString());
 
 
 module.exports = LinkedList;
