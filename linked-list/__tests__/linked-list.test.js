@@ -76,7 +76,9 @@ describe('LinkedList', () => {
         expected.append(3);
         expected.append(33);
 
+
         const result = zipLists(l1, l2)
+
         expect(result).toEqual(expected)  //after 2
     })
 });
