@@ -11,7 +11,7 @@
 //     }
 // }
 
-class AnimalShelter {
+class Buggiest {
     constructor(name) {
         // this.dogQueue = [];
         // this.catQueue = [];
@@ -21,6 +21,6 @@ class AnimalShelter {
 
 
 module.exports = {
-    AnimalShelter,
+    AnimalShelter: Buggiest,
     // Animal
 }
