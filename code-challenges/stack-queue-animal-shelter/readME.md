@@ -1,14 +1,14 @@
 ## Challenge Title 
-#### Create a class called AnimalShelter which holds only dogs and cats (class 12)
+#### Create a class called AnimalShelt which holds only dogs and cats (class 12)
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
-![pseudoQ.png](pseudoQ.png)
+![animal.png](animal.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-O(2N) ? .
+O(1) Shifting/pushing only one element.
 
 ## Solution  
-[pseudoQueue (using two Stacks)](pseudoQueue.js)
+[AnimalShelter.js](AnimalShelter.js)
 <!-- Show how to run your code, and examples of it in action -->
