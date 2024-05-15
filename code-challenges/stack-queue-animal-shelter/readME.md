@@ -10,5 +10,5 @@
 O(1) Shifting/pushing only one element.
 
 ## Solution  
-[buggiest.js](Buggiest.js)
+[Shelter.js](Shelter.js)
 <!-- Show how to run your code, and examples of it in action -->
