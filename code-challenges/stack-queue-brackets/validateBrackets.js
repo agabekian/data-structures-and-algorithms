@@ -2,6 +2,7 @@
 
 function validateBrackets(str) {
     let stack = [];
+    if(str.length < 2) return false; //edge
     for (let i = 0; i < str.length; i++) {
         let b = str[i];
         if (b === '(') stack.push(")");
@@ -14,5 +15,8 @@ function validateBrackets(str) {
     return stack.length === 0;
 }
 
+console.log(
+    validateBrackets(')[')
+)
+module.exports = validateBrackets //no parens!
 
-module.exports = validateBrackets //export breaks it , how? parens!
