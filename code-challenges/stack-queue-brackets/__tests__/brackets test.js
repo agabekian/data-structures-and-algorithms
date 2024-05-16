@@ -1,5 +1,5 @@
 const validateBrackets = require('../validateBrackets');
-describe('validateBruckets', () => {
+describe('validateBrackets', () => {
     test('returns true for a string with balanced brackets', () => {
         expect(validateBrackets("(((())))")).toBe(true);
         expect(validateBrackets("{[()]}")).toBe(true);
