@@ -32,7 +32,7 @@
 
 - Tests
   - Create folder named `__tests__` and within it, a test file called `[data-structure].test.js`
-    - i.e. `__tests__/linked-list.test.js`
+    - i.e. `__tests__/binaryTree test.js`
     - Your tests will then need to require the data structure you're testing
       - i.e. `const LinkedList = require('../index');
 
@@ -42,7 +42,7 @@
   - Remember, you'll have access to `this` within your class methods
 - Tests
   - You will have folder named `__tests__` and within it, a test file called `[data-structure].test.js`
-    - i.e. `__tests__/linked-list.test.js`
+    - i.e. `__tests__/binaryTree test.js`
     - Add to the tests written for this data structure to cover your new method(s)
 
 ### Code Challenge / Algorithm
