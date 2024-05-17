@@ -6,10 +6,11 @@ class Stack {
         this.list = new LinkedList();
     }
 
-    push(value) {
-        const newNode = new Node(value);
-        newNode.next = this.list.head;
-        this.list.head = newNode;
+    push(value) { //say head is A -> B - C ...
+        const new_node = new Node(value); //N
+        new_node.next = this.list.head; //connect new node to  a head. N -> A -> B-> C - head is still A?
+        // console.log(new_node, "new node next is HEAD is ", this.list.head)
+        this.list.head = new_node; // assign new 'chained' list as a new head; N->A->B->C
     }
 
     pop() {
@@ -62,6 +63,18 @@ class Queue {
         return this.list.head === null;
     }
 }
+let ll = new LinkedList();
+ll.insert(new Node('A'));
+ll.insert(new Node('B'));
+ll.insert(new Node('C'));
+
+// console.log(ll.head)
+let test = new Stack();
+test.push(new Node('A'))
+test.push(new Node('B'))
+test.push(new Node('C'))
+test.push(new Node('N'))
+console.log(ll.head)
 
 
-module.exports = { Stack, Queue };
+module.exports = {Stack, Queue};

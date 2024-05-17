@@ -18,7 +18,14 @@ class LinkedList {
 
 
     insert(node) {
-        this.head = node;
+        if (!this.head) {
+            // If the linked list is empty, set the new node as the head
+            this.head = node;
+        } else {
+            // Otherwise, link the new node to the current head and set it as the new head
+            node.next = this.head;
+            this.head = node;
+        }
     }
 
     include(val) {
