@@ -1,5 +1,6 @@
 // Node class to represent individual nodes in the tree
 const {Queue} = require("../stack-and-queue/stack-and-queue");
+const BinaryTree = require("./BinaryTree");
 
 class Node {
     constructor(value) {
@@ -9,63 +10,6 @@ class Node {
     }
 }
 
-// Binary Tree class
-class BinaryTree {
-    constructor() {
-        this.root = null;
-    }
-
-    // Pre-order traversal
-    preOrder() {
-        const result = [];
-        const traverse = (node) => {
-            if (!node) return;
-            result.push(node.value);
-            traverse(node.left);
-            traverse(node.right);
-        };
-        traverse(this.root);
-        return result;
-    }
-
-    // In-order traversal
-    inOrder() {
-        const result = [];
-        const traverse = (node) => {
-            if (!node) return;
-            traverse(node.left);
-            result.push(node.value);
-            traverse(node.right);
-        };
-        traverse(this.root);
-        return result;
-    }
-
-    // Post-order traversal
-    postOrder() {
-        const result = [];
-        const traverse = (node) => {
-            if (!node) return;
-            traverse(node.left);
-            traverse(node.right);
-            result.push(node.value);
-        };
-        traverse(this.root);
-        return result;
-    }
-
-    treeMax(value) {
-        let cur = this.root;
-        let max = 0;
-        while (cur) {
-            if (cur.value > max) max = cur.value;
-            if (value < cur.value) cur = cur.left;
-            else cur = cur.right;
-        }
-        return false;
-    }
-
-}
 
 // Binary Search Tree class extending BinaryTree
 class BinarySearchTree extends BinaryTree {
@@ -125,17 +69,6 @@ class BinarySearchTree extends BinaryTree {
     // }
 }
 
-const bst = new BinarySearchTree();
 
-// Add nodes to the tree
-bst.add(10);
-bst.add(5);
-bst.add(15);
-bst.add(3);
-bst.add(7);
-bst.add(12);
-bst.add(18);
-
-console.log(bst.bfs())
 
 module.exports = BinarySearchTree;
