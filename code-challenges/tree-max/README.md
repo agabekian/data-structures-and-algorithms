@@ -5,14 +5,15 @@ Arguments: none / Returns: number
 
 Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 #### Whiteboard
-                       1 (m: -∞)
+                        1 (m: -∞)
 
                      /            \
-                 8 (m:8)         11 (new max: 11)
+                 3 (m:3)         11 (new max: 11)
                /     \            /  \
-           4 (m:8)   5(m:8)   5(m:11) 7(m:11) |--> return 11
-         /   \   
-    -14(m:8) -13(m:8)
+            8 (m:8)   5(m:8)   5(m:11) 7(m:11) |--> return 11
+           / \   
+        -33   2(m:8)
+       (m:8)
 
 
 
