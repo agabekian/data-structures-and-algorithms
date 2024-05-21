@@ -63,18 +63,7 @@ class Queue {
         return this.list.head === null;
     }
 }
-let ll = new LinkedList();
-ll.insert(new Node('A'));
-ll.insert(new Node('B'));
-ll.insert(new Node('C'));
 
-// console.log(ll.head)
-let test = new Stack();
-test.push(new Node('A'))
-test.push(new Node('B'))
-test.push(new Node('C'))
-test.push(new Node('N'))
-console.log(ll.head)
 
 
 module.exports = {Stack, Queue};
