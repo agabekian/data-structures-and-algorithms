@@ -4,10 +4,11 @@
 Arguments: none / Returns: number
 
 Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+#### Whiteboard
 
               15
             /     \
-           7      20 (Max: 20)
+           7      20 (Max: 20) -> result
          /  \    / \
        -8   12  18  -5
       /    / \
@@ -24,7 +25,7 @@ The tracking information, indicating the max value encountered so far during tra
 We move from left to right, updating the maximum value as we traverse.
 
 
-Once the traversal is complete, the final maximum value found in the entire tree is noted to the right of the root node, which is 15.
+Once the traversal is complete, the final maximum value found in the entire tree is noted which is 20.
 
 #### BigO
 Time: O(N) iterate once
