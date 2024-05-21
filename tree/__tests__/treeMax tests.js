@@ -21,6 +21,11 @@ describe('BinaryTree', () => {
             tree.root.left.left = new TreeNode(3);
             tree.root.left.right = new TreeNode(7);
             tree.root.right.right = new TreeNode(20);
+      //      10
+      //     /   \
+      //   5      15
+      //  / \       \
+      // 3   7      20
             expect(tree.findMaxValue()).toBe(20);
         });
 

@@ -5,27 +5,26 @@ Arguments: none / Returns: number
 
 Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 #### Whiteboard
+                       1 (m: -∞)
 
-              15
-            /     \
-           7      20 (Max: 20) -> result
-         /  \    / \
-       -8   12  18  -5
-      /    / \
-    -4    9   13 (Max: 15)
-               /
-            -17    (Max: 15)
-                        \
-                     -16 (Max: 15)
+                     /            \
+                 8 (m:8)         11 (new max: 11)
+               /     \            /  \
+           4 (m:8)   5(m:8)   5(m:11) 7(m:11) |--> return 11
+         /   \   
+    -14(m:8) -13(m:8)
+
+
+
 
 We start with the max value initialized to neg infinity.
-The tracking information, indicating the max value encountered so far during traversal, is enclosed in parentheses.
+Track the max value encountered so far during traversal, enclosed in parentheses.
 
 
 We move from left to right, updating the maximum value as we traverse.
 
 
-Once the traversal is complete, the final maximum value found in the entire tree is noted which is 20.
+Once the traversal is complete, the final max value found in the entire tree is 20.
 
 #### BigO
 Time: O(N) iterate once
