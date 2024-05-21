@@ -59,7 +59,7 @@ class BinaryTree {
         const findMax = (node, curMax) => {
             if (!node) {return curMax;} //bc
             console.log(
-                node.value
+                node.value, curMax
             )
             curMax = Math.max(curMax, node.value); //update max
             // Recursively check left and right subtrees
