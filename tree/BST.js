@@ -55,7 +55,7 @@ class BinarySearchTree extends BinaryTree {
 
 
 
-    // bfs() {
+    // tree-breadth-first() {
     //     let q = new Queue();
     //     let visited = new Queue()
     //     console.log(this.root.val)

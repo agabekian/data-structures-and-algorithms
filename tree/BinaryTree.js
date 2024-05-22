@@ -53,6 +53,7 @@ class BinaryTree {
         traverse(this.root);
         return result;
     }
+
 // ################### CC16 #############################
     findMaxValue() {
         // Helper function for recursive traversal
@@ -71,7 +72,23 @@ class BinaryTree {
         if (!this.root) return null;
         return findMax(this.root, Number.NEGATIVE_INFINITY);
     }
+
+    //################ CC17 ##########################
+    bfs(root) {
+        let cur = root;
+        let q = new Queue();
+        q.enqueue(root);
+        let res = [];
+        while (!q.isEmpty()) {
+            let cur = q.dequeue();
+            res.push(cur.value);
+
+            if (cur.left) q.enqueue(cur.left);
+            if (cur.right) q.enqueue(cur.right);
+        }
+        return res;
+    }
 }
 
 
-module.exports = { BinaryTree, TreeNode };
+module.exports = {BinaryTree, TreeNode};

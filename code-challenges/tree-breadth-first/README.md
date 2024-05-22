@@ -1,35 +1,52 @@
-#### Write the following method for the Binary Tree class   
-#### _find maximum value_
+#### Write a function called breadth first
+Arguments: tree
+Return: list of all values in the tree, in the order they were encountered
+#### Test Example
+#### Input
+![img.png](img.png)
+#### Output
+#### [2,7,5,2,6,9,5,11,4]
 
-Arguments: none / Returns: number
-
-Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 #### Whiteboard
-                        m: -∞ 
-                          1 
-                       (m:1)
-                      /          \
-                   3(m:3)        7 (m:8)
-                  /    \        /   \
-                8 (m:8) 5     11(m:11) 7(m:11)  --> return 11
-               / \     (m:8) 
-            -33    2
-          (m:8)    (m:8)
+                    
+![bfs.png](bfs.png)
 
+####  Algo Process
+* Initialize: Begin by initializing an empty queue to store nodes to be visited and an empty array (or list) to store the traversal order.
 
+* Enqueue Initial Node: Add the initial node (e.g., root node) to the queue.
 
+While Queue is Not Empty:
 
-We start with the max value initialized to neg infinity.
-Track the max value encountered so far during traversal, enclosed in parentheses.
-
-
-We move from left to right, updating the maximum value as we traverse.
-
-
-Once the traversal is complete, the final max value found in the entire tree is 20.
-
+* Dequeue a node from the front of the queue. 
+* Visit the dequeued node and add its value to the traversal array.
+* Enqueue all unvisited neighboring nodes of the dequeued node into the queue.
+* Until Queue is Empty:  
+Continue dequeuing nodes, visiting them, and enqueuing their neighbors until the queue is empty.
 #### BigO
-Time: O(N) iterate once
+**Time Complexity:**
+The time complexity of BFS is O(V + E), where:  
+**V** is the number of vertices (nodes) in the graph or tree.  
+**E** is the number of edges in the graph or tree.  
+
+**Space Complexity:**
+The space complexity of BFS is O(V), where V is the number of vertices (nodes) in the graph or tree.
+
+
+**Summary:**
+Time Complexity: O(V + E)
+Space Complexity: O(V)
+
+>In BFS, the main space-consuming factor is the queue used to store nodes to be visited. At most, all the vertices of the graph or tree can be stored in the queue at once, leading to a space complexity proportional to the number of vertices.
+
+>BFS is efficient for searching and traversing graphs, especially when the number of edges is proportional to the number of vertices. Its time complexity makes it suitable for a wide range of applications, such as finding shortest paths in unweighted graphs and discovering connected components.
+
+
+
+
+
+
+
 
 #### Solution
 [BinaryTree class with the method 'treeMax'](..%2F..%2Ftree%2FBinaryTree.js)  

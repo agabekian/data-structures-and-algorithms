@@ -32,7 +32,7 @@ Once the traversal is complete, the final max value found in the entire tree is 
 Time: O(N) iterate once
 
 #### Solution
-[BinaryTree class with the method 'treeMax'](..%2F..%2Ftree%2FBinaryTree.js)  
-[treeMax method tests](..%2F..%2Ftree%2F__tests__%2FtreeMax%20tests.js)
+[BinaryTree class with the method 'bfs'](..%2F..%2Ftree%2FBinaryTree.js)    
+[bfs method tests](..%2F..%2Ftree%2F__tests__%2Fbfs%20test.js)  
 
-[//]: # (cc16)
+- [x] cc17
