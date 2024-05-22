@@ -83,7 +83,7 @@ class BinaryTree {
             let cur = q.dequeue();
             res.push(cur.value);
 
-            if (cur.left) q.enqueue(cur.left);
+            if (cur.left) q.enqueue(cur.left);  //major "if"s dont forget
             if (cur.right) q.enqueue(cur.right);
         }
         return res;
