@@ -75,10 +75,10 @@ class BinaryTree {
 
     //################ CC17 ##########################
     bfs(root) {
+        let res = [];
         let cur = root;
         let q = new Queue();
         q.enqueue(root);
-        let res = [];
         while (!q.isEmpty()) {
             let cur = q.dequeue();
             res.push(cur.value);
