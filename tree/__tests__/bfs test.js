@@ -44,8 +44,6 @@ describe('BinaryTree', () => {
 
  */
 
-describe('BinaryTree', () => {
-    describe('bfs', () => {
         test('should perform breadth-first search traversal of a binary tree', () => {
             // Create a binary tree
             const tree = new BinaryTree();
@@ -65,6 +63,6 @@ describe('BinaryTree', () => {
 
             // Assert that the result matches the expected result
             expect(result).toEqual(expectedResult);
-        });
-    });
+
+
 });
