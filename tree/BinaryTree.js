@@ -78,12 +78,12 @@ class BinaryTree {
         let res = [];
         let cur = root;
         let q = new Queue();
-        q.enqueue(root);
+        q.enqueue(root); //step1 pre-loop (!)
         while (!q.isEmpty()) {
             let cur = q.dequeue();
             res.push(cur.value);
 
-            if (cur.left) q.enqueue(cur.left);  //major "if"s dont forget
+            if (cur.left) q.enqueue(cur.left);  //major "if"s don't forget
             if (cur.right) q.enqueue(cur.right);
         }
         return res;
