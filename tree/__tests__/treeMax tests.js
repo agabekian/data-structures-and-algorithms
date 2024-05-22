@@ -15,7 +15,7 @@ describe('BinaryTree', () => {
 
         test('returns the maximum value for a tree with multiple nodes', () => {
             const tree = new BinaryTree();
-            tree.root = new TreeNode(101);
+            tree.root = new TreeNode(10);
             tree.root.left = new TreeNode(5);
             tree.root.right = new TreeNode(15);
             tree.root.left.left = new TreeNode(3);

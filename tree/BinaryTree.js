@@ -20,7 +20,7 @@ class BinaryTree {
         const result = [];
         const traverse = (node) => {
             if (!node) return;
-            result.push(node.value);
+            result.push(node.value);  // C -> L -> R
             traverse(node.left);
             traverse(node.right);
         };
@@ -33,7 +33,7 @@ class BinaryTree {
         const result = [];
         const traverse = (node) => {
             if (!node) return;
-            traverse(node.left);
+            traverse(node.left); // L -> C -> R
             result.push(node.value);
             traverse(node.right);
         };
@@ -46,7 +46,7 @@ class BinaryTree {
         const result = [];
         const traverse = (node) => {
             if (!node) return;
-            traverse(node.left);
+            traverse(node.left);  // L -> R -> C
             traverse(node.right);
             result.push(node.value);
         };
@@ -57,7 +57,7 @@ class BinaryTree {
     findMaxValue() {
         // Helper function for recursive traversal
         const findMax = (node, curMax) => {
-            if (!node) {return curMax;} //bc
+            if (!node) return curMax; //bc
             console.log(
                 node.value, curMax
             )
