@@ -19,5 +19,7 @@
 6. Handle Collisions
    Common collision resolution strategies include chaining (using linked lists) and open addressing (probing).
 ![img.png](img.png)
-[Hashtable.js](Hashtable.js)
-[hashtable.test.js](hashtable.test.js)
+
+[Hashtable js](Hashtable.js)
+
+[Tests](hashtable.test.js)
