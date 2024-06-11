@@ -19,7 +19,7 @@ Create a new hashtable.
 Iterate over array, if hashtable `has` current word, return it
 Else, `set` word into hashtable.
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-Time: O(N) Iterating _once._  
+Time: O(N) Worst case if not found: Iterating _once._  
 
 ### Solution  
 [repeatedWord.js](repeatedWord.js)
