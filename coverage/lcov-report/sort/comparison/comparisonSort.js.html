@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for code-challenges/linked-list-zip/zipLists.js</title>
+    <title>Code coverage report for sort/comparison/comparisonSort.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">code-challenges/linked-list-zip</a> zipLists.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">sort/comparison</a> comparisonSort.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.47% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/19</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/14</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -87,66 +87,54 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Node = require('../../linked-list/SLLNode.js');
-&nbsp;
-function zipLists(list1, list2) {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!list1 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!list2)</span> <span class="cstat-no" title="statement not covered" >return null;</span>
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!list1 || !list2) {
-<span class="cstat-no" title="statement not covered" >        return list1 || list2;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class Movie {
+    constructor(title, year, genres) {
+        this.title = title;
+        this.year = year;
+        this.genres = genres;
     }
-    let cur1 = list1.head,
-        cur2 = list2.head; //2 pointers to lists
-&nbsp;
-    while (cur1 &amp;&amp; cur2) {
-        let next1 = cur1.next, //store lists ".nexts" 8 &amp; 808
-            next2 = cur2.next; //
-        // console.log("pointers", next1.val,next2.val)
-        cur1.next = cur2; //zip to list2   11-&gt;
-        // 101-&gt;808-&gt;909
-        // console.log("cur1=head", cur1, "now point to list2 ",cur1.next)
-        if (next1) { // is next stored null ?
-            cur2.next = next1; // 101 --&gt; 8
-            cur1 = next1; //advance cur1 to next1: 101 &gt;&gt; 8
-            cur2 = next2; //advance cur2 to next2  808 &gt;&gt; 909
-            console.log("CUR2 is now next", cur2)
-        } else break;
-    }
-    return list1;
 }
 &nbsp;
-module.exports = zipLists;
+// Function to sort movies by most recent year first
+function sortByYearDescending(movies) {
+    return movies.sort((a, b) =&gt; b.year - a.year);
+}
+&nbsp;
+// Function to sort movies alphabetically by title, ignoring leading "A"s, "An"s, or "The"s
+function sortByTitle(movies) {
+    const ignoreArticles = /^(a|an|the)\s+/i; // Regular expression to match leading articles
+    return movies.sort((a, b) =&gt; {
+        const titleA = a.title.replace(ignoreArticles, ''); // Remove leading articles
+        const titleB = b.title.replace(ignoreArticles, '');
+        return titleA.localeCompare(titleB); // Alphabetical comparison of titles
+    });
+}
+&nbsp;
+module.exports = { Movie, sortByYearDescending, sortByTitle };
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

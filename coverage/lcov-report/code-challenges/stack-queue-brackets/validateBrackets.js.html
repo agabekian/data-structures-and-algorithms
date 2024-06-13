@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for code-challenges/linked-list-zip/zipLists.js</title>
+    <title>Code coverage report for code-challenges/stack-queue-brackets/validateBrackets.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">code-challenges/linked-list-zip</a> zipLists.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">code-challenges/stack-queue-brackets</a> validateBrackets.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.47% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/19</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.28% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/14</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -85,68 +85,50 @@
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Node = require('../../linked-list/SLLNode.js');
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//do not export with func with the brackets !paren
 &nbsp;
-function zipLists(list1, list2) {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!list1 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!list2)</span> <span class="cstat-no" title="statement not covered" >return null;</span>
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!list1 || !list2) {
-<span class="cstat-no" title="statement not covered" >        return list1 || list2;</span>
-    }
-    let cur1 = list1.head,
-        cur2 = list2.head; //2 pointers to lists
+function validateBrackets(str) {
+    let stack = [];
 &nbsp;
-    while (cur1 &amp;&amp; cur2) {
-        let next1 = cur1.next, //store lists ".nexts" 8 &amp; 808
-            next2 = cur2.next; //
-        // console.log("pointers", next1.val,next2.val)
-        cur1.next = cur2; //zip to list2   11-&gt;
-        // 101-&gt;808-&gt;909
-        // console.log("cur1=head", cur1, "now point to list2 ",cur1.next)
-        if (next1) { // is next stored null ?
-            cur2.next = next1; // 101 --&gt; 8
-            cur1 = next1; //advance cur1 to next1: 101 &gt;&gt; 8
-            cur2 = next2; //advance cur2 to next2  808 &gt;&gt; 909
-            console.log("CUR2 is now next", cur2)
-        } else break;
+    for (let i = 0; i &lt; str.length; i++) {
+        let b = str[i];
+        if (b === '(') stack.push(")");
+        else if (b === "{") stack.push("}");
+        else if (b === "[") stack.push("]");
+        else <span class="missing-if-branch" title="else path not taken" >E</span>if (stack.length !== 0 || b !== stack.pop()) { //OR NOT &amp;&amp;
+            return false;
+        }
     }
-    return list1;
+    return stack.length === 0;
 }
 &nbsp;
-module.exports = zipLists;
+console.log(
+    "running",validateBrackets('}')
+)
+module.exports = validateBrackets //no parens!
+&nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
