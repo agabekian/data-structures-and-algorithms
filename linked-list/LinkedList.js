@@ -1,4 +1,4 @@
-const Node = require('./SLLNode');
+const Node = require('./Node');
 
 class LinkedList {
     constructor() {

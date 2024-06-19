@@ -1,4 +1,4 @@
-const Node = require('../../linked-list/SLLNode.js');
+const Node = require('../../linked-list/Node.js');
 
 function zipLists(list1, list2) {
     if (!list1 && !list2) return null;

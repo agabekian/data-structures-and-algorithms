@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('../SLLNode.js');
+const Node = require('../Node.js');
 const LinkedList = require('../LinkedList');
 const zipLists = require('../../../data-structures-and-algorithms/code-challenges/linked-list-zip/zipLists');
 // Require our linked list implementation

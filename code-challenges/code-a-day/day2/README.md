@@ -14,7 +14,6 @@
 
 
 
-Let's analyze the time complexity (Big O) of the `sumUpQueue` algorithm.
 
 ### Time Complexity Analysis
 

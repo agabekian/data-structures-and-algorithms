@@ -1,5 +1,5 @@
 const LinkedList = require('../linked-list/LinkedList');
-const Node = require('../linked-list/SLLNode');
+const Node = require('../linked-list/Node');
 
 class Stack {
     constructor() {
