@@ -2,7 +2,7 @@
 ### Reverse Linked List
 Write a function that will reverse a single-linked list.
 
-##### Process (Whiteboard)
+#### Process (Whiteboard)
 
 ![img.png](img.png)
 
