@@ -1,5 +1,5 @@
 const sortStack = require('./sortStack');
-const {Stack} = require('../../stack-and-queue/stack-and-queue');
+const {Stack} = require('../../../stack-and-queue/stack-and-queue');
 
 
 describe('sortStack', () => {

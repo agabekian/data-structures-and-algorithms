@@ -4,7 +4,10 @@ const Node = require('../linked-list/SLLNode');
 class Stack {
     constructor() {
         this.list = new LinkedList();
+        this.count = 0;
+
     }
+
 
     push(value) { //say head is A -> B - C ...
         const new_node = new Node(value); //N
@@ -24,9 +27,12 @@ class Stack {
 
     peek() {
         if (this.list.head === null) {
-            throw new Error("Stack is empty");
+            return null;
+            // throw new Error("Stack is empty");
+
         }
         return this.list.head.val;
+
     }
 
     isEmpty() {
@@ -37,6 +43,16 @@ class Stack {
 class Queue {
     constructor() {
         this.list = new LinkedList();
+        this.size = 0
+
+    }
+
+    get lang() {
+        return this.size;
+    }
+
+    set(val) {
+        this.size = this.count + val
     }
 
     enqueue(value) {
@@ -45,7 +61,8 @@ class Queue {
 
     dequeue() {
         if (this.list.head === null) {
-            throw new Error("Queue is empty");
+            return null;
+            // throw new Error("Queue is empty");
         }
         const value = this.list.head.val;
         this.list.head = this.list.head.next;
@@ -54,7 +71,8 @@ class Queue {
 
     peek() {
         if (this.list.head === null) {
-            throw new Error("Queue is empty");
+            return null;
+            // throw new Error("Queue is empty"); //will not work well in actual code: no return , will stall code exec
         }
         return this.list.head.val;
     }
@@ -63,7 +81,6 @@ class Queue {
         return this.list.head === null;
     }
 }
-
 
 
 module.exports = {Stack, Queue};

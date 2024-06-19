@@ -1,7 +1,7 @@
-### Sort stack (recursively)
-[sortStack.js](sortStack.js)
+## Sort stack (recursively)
+[sumUpQueue.js](sumUpQueue.js)
 
-[sortStack.test.js](sortStack.test.js)
+[sumUpQueue.test.js](sumUpQueue.test.js)
 
 ##### Process
 
@@ -29,11 +29,11 @@ Once the recursive calls are completed and all elements are reinserted into the 
 
 ##### Pseudocode 
 
-    function sortStack(stack):
+    function sumUpQueue(stack):
     if stack is empty:
     return
     topElement = stack.pop()
-    sortStack(stack)
+    sumUpQueue(stack)
     sortedInsert(stack, topElement)
     
     function sortedInsert(stack, element):
@@ -44,11 +44,11 @@ Once the recursive calls are completed and all elements are reinserted into the 
     sortedInsert(stack, element)
     stack.push(topElement)
 
-Let's analyze the time complexity (Big O) of the `sortStack` algorithm.
+Let's analyze the time complexity (Big O) of the `sumUpQueue` algorithm.
 
 ### Time Complexity Analysis
 
-The `sortStack` algorithm utilizes recursion to sort the stack. Here's the breakdown of the time complexity:
+The `sumUpQueue` algorithm utilizes recursion to sort the stack. Here's the breakdown of the time complexity:
 
 1. **Recursive Sorting**:
     - At each recursive call, we pop an element from the stack until the stack becomes empty. This process requires traversing the entire stack once per recursive call.
@@ -65,16 +65,16 @@ The `sortStack` algorithm utilizes recursion to sort the stack. Here's the break
 
 Considering both the recursive sorting and the sorted insertion, the dominant factor is the recursive sorting, which contributes \( O(n^2) \) to the overall time complexity.
 
-Therefore, the overall time complexity of the `sortStack` algorithm is \( O(n^2) \), where \( n \) is the number of elements in the stack.
+Therefore, the overall time complexity of the `sumUpQueue` algorithm is \( O(n^2) \), where \( n \) is the number of elements in the stack.
 
 ### Space Complexity
 
-The space complexity of the `sortStack` algorithm is \( O(n) \) due to the recursive calls on the stack, where \( n \) is the number of elements in the stack. Each recursive call consumes memory on the call stack. Additionally, the auxiliary space required for sorting operations is negligible compared to the input size, so it can be considered constant, resulting in an overall space complexity of \( O(n) \).
+The space complexity of the `sumUpQueue` algorithm is \( O(n) \) due to the recursive calls on the stack, where \( n \) is the number of elements in the stack. Each recursive call consumes memory on the call stack. Additionally, the auxiliary space required for sorting operations is negligible compared to the input size, so it can be considered constant, resulting in an overall space complexity of \( O(n) \).
 
 ####  Whiteboard
     --------------------------------------------------
         |                                                |
-        |                sortStack(stack)                |
+        |                sumUpQueue(stack)                |
         |                                                |
         --------------------------------------------------
         |                                                |
@@ -82,7 +82,7 @@ The space complexity of the `sortStack` algorithm is \( O(n) \) due to the recur
         |      return                                    |
         |                                                |
         |  topElement = stack.pop()                      |
-        |  sortStack(stack)                             |
+        |  sumUpQueue(stack)                             |
         |  sortedInsert(stack, topElement)              |
         |                                                |
         --------------------------------------------------
@@ -90,54 +90,54 @@ The space complexity of the `sortStack` algorithm is \( O(n) \) due to the recur
                Initial Stack [3, 1, 4, 1, 5]
         --------------------------------------------------
         
-                  sortStack([3, 1, 4, 1, 5])
+                  sumUpQueue([3, 1, 4, 1, 5])
         --------------------------------------------------
         |                                                |
         |  topElement = 5                                |
         |                                                |
         --------------------------------------------------
         |                                                |
-        |            sortStack([3, 1, 4, 1])             |
+        |            sumUpQueue([3, 1, 4, 1])             |
         --------------------------------------------------
         
-                        sortStack([3, 1, 4, 1])
+                        sumUpQueue([3, 1, 4, 1])
         --------------------------------------------------
         |                                                |
         |  topElement = 1                                |
         |                                                |
         --------------------------------------------------
         |                                                |
-        |               sortStack([3, 1, 4])             |
+        |               sumUpQueue([3, 1, 4])             |
         --------------------------------------------------
         
-                           sortStack([3, 1, 4])
+                           sumUpQueue([3, 1, 4])
         --------------------------------------------------
         |                                                |
         |  topElement = 4                                |
         |                                                |
         --------------------------------------------------
         |                                                |
-        |                  sortStack([3, 1])             |
+        |                  sumUpQueue([3, 1])             |
         --------------------------------------------------
         
-                              sortStack([3, 1])
+                              sumUpQueue([3, 1])
         --------------------------------------------------
         |                                                |
         |  topElement = 1                                |
         |                                                |
         --------------------------------------------------
         |                                                |
-        |                    sortStack([3])              |
+        |                    sumUpQueue([3])              |
         --------------------------------------------------
         
-                                sortStack([3])
+                                sumUpQueue([3])
         --------------------------------------------------
         |                                                |
         |  topElement = 3                                |
         |                                                |
         --------------------------------------------------
         |                                                |
-        |                    sortStack([])               |
+        |                    sumUpQueue([])               |
         --------------------------------------------------
         |                                                |
         |               Insert 3 into []                 |

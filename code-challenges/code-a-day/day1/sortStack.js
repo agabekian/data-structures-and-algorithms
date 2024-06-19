@@ -1,4 +1,4 @@
-const Stack = require('../../stack-and-queue/stack-and-queue');
+const Stack = require('../../../stack-and-queue/stack-and-queue');
 
 function sortStack(stack) {
     if (stack.isEmpty()) {
