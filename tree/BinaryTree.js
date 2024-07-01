@@ -1,15 +1,12 @@
-// Node class to represent individual nodes in the tree
 const {Queue} = require("../stack-and-queue/stack-and-queue");
 
 class TreeNode {
     constructor(val) {
         this.value = val;
-        this.left = null;
-        this.right = null;
+        this.left = this.right = null;
     }
 }
 
-// Binary Tree class
 class BinaryTree {
     constructor() {
         this.root = null;
@@ -76,11 +73,10 @@ class BinaryTree {
     //################ CC17 ##########################
     bfs(root) {
         let res = [];
-        let cur = root;
         let q = new Queue();
         q.enqueue(root); //step1 pre-loop (!)
         while (!q.isEmpty()) {
-            let cur = q.dequeue();
+            let cur = q.dequeue(); //inside!
             res.push(cur.value);
 
             if (cur.left) q.enqueue(cur.left);  //major "if"s don't forget
