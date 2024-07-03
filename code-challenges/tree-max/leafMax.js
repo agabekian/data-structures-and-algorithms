@@ -4,7 +4,8 @@ const {BinaryTree, TreeNode} = require("../../tree/BinaryTree");
 function findLeafMax(node) {
     // Base case: if node is null, return negative infinity (or handle as needed)
     if (node === null) {
-        return -Infinity; // Assuming all values are >= 0
+        // return -Infinity; // Assuming all values are >= 0
+        return null
     }
 
     // Base case: if node is a leaf (no left and right children)
