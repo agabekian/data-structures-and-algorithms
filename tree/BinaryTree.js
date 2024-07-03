@@ -3,7 +3,8 @@ const {Queue} = require("../stack-and-queue/stack-and-queue");
 class TreeNode {
     constructor(val) {
         this.value = val;
-        this.left = this.right = null;
+        this.left  = null;
+        this.right = null;
     }
 }
 
