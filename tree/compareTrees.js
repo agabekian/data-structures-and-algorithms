@@ -5,23 +5,16 @@ class TreeNode {
         this.right = null;
     }
 }
-
 function areIdenticalTrees(root1, root2) {
-    // Base case: if both roots are null, they are identical
-    if (root1 === null && root2 === null) {
-        return true;
-    }
-
+    if (root1 === null && root2 === null) return true;
     // If one root is null and the other is not, they are not identical
-    if (root1 === null || root2 === null) {
-        return false;
-    }
+    if (root1 === null || root2 === null) return false;
+    // Check if current nodes have the same value
+    if (root1.value !== root2.value) return false; //boom!.. exit
 
-    // Check if current nodes have the same value and recursively check left and right subtrees
+    // Recursively check left and right subtrees
     return (
-        root1.value === root2.value &&
-        areIdenticalTrees(root1.left, root2.left) &&
-        areIdenticalTrees(root1.right, root2.right)
+        areIdenticalTrees(root1.left, root2.left) && areIdenticalTrees(root1.right, root2.right)
     );
 }
 
@@ -40,4 +33,6 @@ tree2.left.left = new TreeNode(4);
 tree2.left.right = new TreeNode(5);
 
 // Comparing the trees
-console.log(areIdenticalTrees(tree1, tree2)); // Output: true
+console.log(
+    areIdenticalTrees(tree1, tree2)
+); // Output: true
