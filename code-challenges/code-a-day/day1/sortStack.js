@@ -1,22 +1,20 @@
 const Stack = require('../../../stack-and-queue/stack-and-queue');
 
 function sortStack(stack) {
-    if (stack.isEmpty()) {
-        return;
-    }
+    if (stack.isEmpty()) return; //base case
 
-    let topElement = stack.pop();
+    let top = stack.pop();
     sortStack(stack);
-    sortedInsert(stack, topElement);
+    sortedInsert(stack, top);
 }
 
-function sortedInsert(stack, element) {
-    if (stack.isEmpty() || stack.peek() <= element) {
-        stack.push(element);
+function sortedInsert(stack, val) {
+    if (stack.isEmpty() || stack.peek() <= val) {
+        stack.push(val);
     } else {
-        let topElement = stack.pop();
-        sortedInsert(stack, element);
-        stack.push(topElement);
+        let top = stack.pop();
+        sortedInsert(stack, val);
+        stack.push(top);
     }
 }
 
