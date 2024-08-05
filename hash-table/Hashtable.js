@@ -23,7 +23,8 @@ class Hashtable {
     }
 
     get(key) {
-        const index = this.hash(key);
+         const index = this.hash(key);
+         //pushing
         const bucket = this.buckets[index];
 
         for (const [k, v] of bucket) {
